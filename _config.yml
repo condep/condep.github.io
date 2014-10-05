@@ -1,5 +1,5 @@
-gems:
-  - jekyll-sitemap
+markdown: kramdown
+highlighter: pygments
 
 collections:
   docs:

@@ -6,8 +6,12 @@ permalink: /docs/quick-start/
 
 Quick Start
 ===========
+Some Text..
 
-```cs
+asdfasdf asdlfkjals df jalskj df
+asldkfjas flkja sdlf
+
+{% highlight csharp %}
 public class CredSSPTest : Artifact.Remote
 {
     public override void Configure(IOfferRemoteOperations server, ConDepSettings settings)
@@ -15,5 +19,4 @@ public class CredSSPTest : Artifact.Remote
         server.Execute.PowerShell("write-host 'test credssp'", opt => opt.UseCredSSP(true));
     }
 }
-```
-
+{% endhighlight %}
