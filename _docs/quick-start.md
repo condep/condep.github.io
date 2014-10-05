@@ -7,7 +7,7 @@ permalink: /docs/quick-start/
 Quick Start
 ===========
 
-```csharp
+```cs
 public class CredSSPTest : Artifact.Remote
 {
     public override void Configure(IOfferRemoteOperations server, ConDepSettings settings)
