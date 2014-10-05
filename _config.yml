@@ -1,0 +1,6 @@
+gems:
+  - jekyll-sitemap
+
+collections:
+  docs:
+    output: true

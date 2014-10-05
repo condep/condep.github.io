@@ -1,0 +1,28 @@
+- title: General
+  docs:
+  - what-is-condep
+  - new
+  - requirements
+  - security
+  - quick-start
+
+- title: Philosophy
+  docs:
+  - push-based
+
+- title: Usage
+  docs:
+  - artifacts
+  - environment
+  - condep-exe
+  - operations
+  - load-balancer
+
+- title: Extending
+  docs:
+  - custom-operations
+  - custom-loadbalancer
+
+- title: Contributing
+  docs:
+  - cla

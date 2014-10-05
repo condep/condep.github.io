@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>ConDep Docs by condep</title>
+    <link rel="stylesheet" href="{{ site.path }}/stylesheets/styles.css">
+    <link rel="stylesheet" href="{{ site.path }}/stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+    <div id="top">
+      <div id="header">
+        <div id="logo">
+          <a href="/" title="ConDep is a highly extendable Domain Specific Language for Continuous Deployment, Continuous Delivery and Infrastructure as Code on Windows.">
+            <img src="{{ site.path }}/images/ConDepLogo.png" alt="ConDep">
+          </a>
+        </div>
+        <div>
+          <h1>Documentation v3.0</h1>
+        </div>
+      </div>
+    </div>
+
+    <div id="main">
+      <div id="navigation">
+        {% include navigation.html %}
+      </div>
+      <section>
+        <p class="preliminary">[Note: This is preliminary unfinished documentation.]</p>
+				{{ content }}
+      </section>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
