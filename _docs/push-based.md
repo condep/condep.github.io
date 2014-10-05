@@ -1,6 +1,6 @@
 ---
 layout: page
-title: What does push based mean?
+title: Push based
 permalink: /docs/push-based/
 ---
 

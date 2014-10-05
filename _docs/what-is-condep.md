@@ -1,6 +1,7 @@
 ---
 layout: page
 title: What is ConDep?
+next_section: new
 permalink: /docs/what-is-condep/
 ---
 
@@ -8,11 +9,13 @@ What is ConDep?
 ===============
 
 ##Short version
-ConDep enables you to push software and infrastructure configurations to Windows Servers. This can be deployment of your applications and/or complete setup for your Servers (infrastructure). Examples are software needed, IIS configuration, and other prerequisites for your application to work (this also includes other Servers). The idea is that ConDep controls the Server using an already bootstrapped Server, or bootstrap the server for you (typically in the cloud). Any changes needed on the Servers are added to ConDep, and will be effectuated the next time you run it.
+ConDep enables you to push software and infrastructure configurations to Windows Servers. This can be deployment of your applications and/or complete setup for your Servers (infrastructure). Examples are software needed, IIS configuration, and other prerequisites for your application to work (this also includes other Servers). 
+
+![ConDep Architecture Image](../../images/condep_arch.png)The idea is that ConDep controls the Server using an already bootstrapped Server, or bootstrap the server for you (typically in the cloud). Any changes needed on the Servers are added to ConDep, and will be effectuated the next time you run it.
 
 You do this by creating Artifacts using ConDep's internal DSL in Microsoft .NET (most commonly C#) and execute these Artifacts with condep.exe, ConDep's command line tool. 
 
-By creating these Artifacts for e.g. a Web Server, you can point ConDep to any Windows Server and it will configure it as the Web Server you have defined. Often though, you have more than just WebServers. This is why ConDep has the concepts of Environments and Tiers. In short, Environments have Tiers, and Tiers have Servers. To read more about these concepts, see the documentation under the _Usage_ section in the documentation menu.
+By creating these Artifacts for e.g. a Web Server, you can point ConDep to any Windows Server and it will configure it as the Web Server you have defined. Often though, you have more than just WebServers. This is why ConDep has the concepts of Environments and Tiers. In short, Environments have Tiers, and Tiers have Servers (see drawing). To read more about these concepts, see the documentation under the _Usage_ section in the documentation menu.
 
 ##Long(er) version
 ConDep is a open source infrastructure configuration and deployment DSL (Domain Specific Language) specifically targeted to (but not limited to) the Windows Server platform. If your familiar with tools like Chef and Puppet, ConDep does very much the same, but with native support for Windows.
