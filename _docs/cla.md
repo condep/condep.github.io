@@ -13,9 +13,9 @@ If you have any questions regarding this agreement, please use this contact form
 
 ###Please read the contributor license and sign electronically by filling out the form below.
 
+<div class="cla" markdown="1">
 You accept and agree to the following terms and conditions for Your present and future Contributions submitted to ConDep. Except for the license granted herein to ConDep and recipients of software distributed by ConDep, You reserve all right, title, and interest in and to Your Contributions.
 
-<div class="cla" markdown="1">
 1. _Definitions._<br>
    “You” (or “Your”) shall mean the copyright owner or legal entity authorized by the copyright owner that is making this Agreement with ConDep. For legal entities, the entity making a Contribution and all other entities that control, are controlled by, or are under common control with that entity are considered to be a single Contributor. For the purposes of this definition, “control” means<br>
    &nbsp;&nbsp;&nbsp;(i) the power, direct or indirect, to cause the direction or management of such entity, whether by contract or otherwise, or<br>   
