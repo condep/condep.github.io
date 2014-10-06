@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Quick Start
+prev_section: security
+next_section: push-based
 permalink: /docs/quick-start/
 ---
 

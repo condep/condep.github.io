@@ -605,6 +605,7 @@ strong {
 
 section img {
   max-width: 100%;
+  margin: 10px 10px 10px 10px;
 }
 
 blockquote {
@@ -835,7 +836,6 @@ section {
 }
 
 section img {
-  float: left;
   margin-right: 20px;
 }
 
@@ -1009,6 +1009,14 @@ article {
 .align-right { text-align: right; }
 
 .align-left { text-align: left; }
+
+.img-align-left {
+    float: left;
+}
+
+.img-align-right {
+    float: right;
+}
 
 /* Note types */
 .note { 
