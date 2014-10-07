@@ -151,6 +151,10 @@ body {
   margin: 0;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 /* =============================================================================
    Links
    ========================================================================== */
@@ -528,13 +532,19 @@ table {
   border-spacing: 0;
 }
 
+thead {
+  font-size: 20px;
+  color: #e8e8e8;
+}
+
 body {
   padding: 0px 0 20px 0px;
   margin: 0px;
-  font: 14px/1.5 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #f0e7d5;
+  font: 15px/1.5 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #a6a8a9;
   font-weight: normal;
   background: #2E2E2E;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -656,6 +666,7 @@ pre code {
 table {
   width: 100%;
   border-collapse: collapse;
+  padding-bottom: 20px;
 }
 
 th {
@@ -733,6 +744,8 @@ li.current a:after {
 #main {
   clear: both;
   display: block;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 #navigation {
   margin-top: 20px;
@@ -740,6 +753,7 @@ li.current a:after {
   padding:5px 0px 0px 5px; 
   line-height: 22px;
   position: absolute;
+  text-align: right;
 }
 #navigation li {
   list-style: none;
@@ -749,8 +763,22 @@ li.current a:after {
   text-align: right;
 }
 #navigation h3 {
-  text-align: right;
+  border-bottom: 1px solid #4283a9;
+  margin-right: -25px;
+  margin-bottom: 20px;
+  padding-right: 25px;
+  display: inline-block;
+  text-transform: uppercase;
 }
+#navigation h4 {
+  text-align: right;
+  margin: 0px;
+  margin-bottom: 10px;
+  color: #b6b6b6;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
 #header nav {
   max-width: 650px;
   margin: 0 auto;
@@ -828,7 +856,7 @@ section {
   margin-left: 240px;
   margin-right: 30px;
   background-color: #383838;
-  min-height: 600px;
+  min-height: 1600px;
   padding: 5px 30px 30px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -965,20 +993,8 @@ section #title .credits.right {
   float: right;
 }
 
-article { 
-  background-color: #444; 
-  -webkit-border-radius: 10px; 
-  -moz-border-radius: 10px; 
-  border-radius: 10px; 
-  padding: 20px; 
-  margin: 0 10px; 
-  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); 
-  -moz-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); 
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); 
-  font-size: 16px; 
-}
-
-.section-nav { text-align: center; padding-top: 40px; position: relative; background: url(../images/doc-footer.png) top center no-repeat; margin: 40px -20px 10px; }
+.section-nav { 
+  text-align: center; padding-top: 40px; position: relative; background: url(../images/doc-footer.png) top center no-repeat; margin: 40px -20px 10px; }
 
 .section-nav > div { width: 49.5%; }
 

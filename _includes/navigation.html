@@ -1,68 +1,13 @@
 {% for section in site.data.docs %}
-  <h3>{{ section.title }}</h3>
-  {% include docs_ul.html items=section.docs %}
+  <h3>{{ section.title }}</h3><br>
+  {% if section.children != null %}
+    {% for childSection in section.children %}
+      <h4>{{ childSection.title }}</h4>
+      {% include docs_ul.html items=childSection.docs %}
+    {% endfor %}
+  {% endif %}
+  {% if section.docs != null %}
+    {% include docs_ul.html items=section.docs %}
+  {% endif %}
+
 {% endfor %}
-
-<!--    
-<h3>General</h3>
-<ul>
-  <li>
-  	<a href="{{ site.path }}/docs/v3_0/what-is-condep">What is ConDep?</a>
-  </li>
-  <li>
-  	<a href="{{ site.path }}/docs/v3_0/what-is-new">What's new in version 3.0?</a>
-  </li>
-  <li>
-  	<a href="">System requirements</a>
-  </li>
-  <li>
-  	<a href="">Security</a>
-  </li>
-  <li>
-  	<a href="">Quick Start</a>
-  </li>
-</ul>
-
-<h3>Philosophy</h3>
-<ul>
-  <li>
-    <a href="pull-based">What does pull based mean?</a>
-  </li>
-</ul>
-
-<h3>Usage</h3>
-<ul>
-  <li>
-    <a href="">Working with Artifacts</a>
-  </li>
-  <li>
-    <a href="">Environment Configuration</a>
-  </li>
-  <li>
-    <a href="">Using ConDep.exe</a>
-  </li>
-  <li>
-    <a href="">Operations</a>
-  </li>
-  <li>
-    <a href="">Integrate with a Load Balancer</a>
-  </li>
-</ul>
-
-<h3>Extending</h3>
-<ul>
-  <li>
-  	<a href="">Create your own operations</a>
-  </li>
-  <li>
-  	<a href="">Create your own Load Balancer integration</a>
-  </li>
-</ul>       
-
-<h3>Contributing</h3>
-<ul>
-  <li>
-    <a href="">Contributor License Agreement</a>
-  </li>
-</ul>
--->
