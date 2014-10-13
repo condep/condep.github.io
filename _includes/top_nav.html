@@ -1,0 +1,16 @@
+<nav>
+  <ul>
+    <li class="{% if page.overview %}current{% endif %}">
+    	<a href="/">Home</a>
+    </li>
+    <li class="{% if page.author %}current{% endif %}">
+    	<a href="/news/">News</a>
+    </li>
+    <li class="{% if page.url contains '/docs/' %}current{% endif %}">
+    	<a href="/docs/">Documentation</a>
+    </li>
+    <li class="{% if page.url contains '/contribute/' %}current{% endif %}">
+    	<a href="/contribute/">Contribute</a>
+    </li>
+  </ul>
+</nav>

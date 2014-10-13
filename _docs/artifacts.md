@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: doc
 title: Working with Artifacts
 permalink: /docs/artifacts/
 ---

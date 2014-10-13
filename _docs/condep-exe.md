@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: doc
 title: Using ConDep.exe
 permalink: /docs/condep-exe/
 ---

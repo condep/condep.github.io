@@ -4,3 +4,6 @@ highlighter: pygments
 collections:
   docs:
     output: true
+
+  main_menu:
+    output: true

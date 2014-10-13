@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: doc
 title: System Requirements
 prev_section: new
 next_section: security

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: doc
 title: ConDep.Dsl.Operations
 permalink: /docs/condep-dsl-operations/
 ---

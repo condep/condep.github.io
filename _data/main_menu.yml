@@ -1,0 +1,14 @@
+- title: Home
+  url: /
+
+- title: News
+  url: /news/
+
+- title: Documentation
+  url: /docs/
+
+- title: Contribute
+  url: /contrib/
+
+- title: Contact
+  url: /contact/

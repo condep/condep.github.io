@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: doc
 title: IISAppPool
 permalink: /docs/operations/infrastructure/iis-app-pool/
 ---

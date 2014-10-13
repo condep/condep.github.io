@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: doc
 title: Push based
 permalink: /docs/push-based/
 ---

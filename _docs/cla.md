@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: doc
 title: Contributor License Agreement
 permalink: /docs/cla/
 ---

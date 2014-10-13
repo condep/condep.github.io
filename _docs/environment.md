@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: doc
 title: Environment Configuration
 permalink: /docs/environment/
 ---

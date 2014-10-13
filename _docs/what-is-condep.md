@@ -1,14 +1,13 @@
 ---
-layout: page
+layout: doc
 title: What is ConDep?
 next_section: new
 permalink: /docs/what-is-condep/
 ---
 
-What is ConDep?
-===============
+<h1>What is <span style="color: #61c10b;">con</span>dep?</h1>
 
-<img src="../../images/condep_arch2.png" class="img-align-right">
+<img src="../../images/condep_arch2.png" class="img-align-right" style="shape-outside: url(../../images/condep_arch2.png);shape-image-threshold: 0.1;">
 
 ##Short version
 ConDep enables you to push software and infrastructure configurations to Windows Servers. This can be deployment of your applications and/or complete setup for your Servers (infrastructure). Examples are software needed, IIS configuration, and other prerequisites for your application to work (this also includes other Servers). 

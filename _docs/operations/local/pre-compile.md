@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: doc
 title: PreCompile
 permalink: /docs/operations/local/pre-compile/
 ---

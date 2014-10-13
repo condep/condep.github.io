@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Thanks for submitting the Contributor License Agreement
 permalink: /docs/thanks_cla/
 ---

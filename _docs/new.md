@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: doc
 title: What's new in version 3.0?
 prev_section: what-is-condep
 next_section: requirements

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: doc
 title: DosCommand
 permalink: /docs/operations/execution/dos-command/
 ---

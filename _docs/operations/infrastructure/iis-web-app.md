@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: doc
 title: IISWebApp
 permalink: /docs/operations/infrastructure/iis-web-app/
 ---

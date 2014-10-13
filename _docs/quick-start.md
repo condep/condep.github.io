@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: doc
 title: Quick Start
 prev_section: security
 next_section: push-based

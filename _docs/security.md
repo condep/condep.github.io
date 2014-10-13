@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: doc
 title: Security
 prev_section: requirements
 next_section: quick-start
