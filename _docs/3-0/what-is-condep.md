@@ -7,12 +7,6 @@ permalink: /docs/3-0/what-is-condep/
 
 <h1>What is <span style="color: #61c10b;">con</span>dep?</h1>
 
-##Short version
-ConDep enables you to push software and infrastructure to Windows Servers. This can be deployment of your applications and/or complete setup for your Servers (infrastructure). The philosophy behind ConDep is that nothing should be done manually, everything automated through ConDep.
-
-ConDep can administrate existing Servers (already bootstrapped) or bootstrap servers for you (typically in the cloud). When you make changes to your infrastructure or deployments through ConDep's Domain Specific Language, the changes will be executed by ConDep on all servers its configured to administrate.  
-
-##Long(er) version
 ConDep is a open source infrastructure configuration and deployment DSL (Domain Specific Language) specifically targeted to (but not limited to) the Windows Server platform. If your familiar with tools like Chef and Puppet, ConDep does very much the same, but with native support for Windows.
 
 ###Continuous Deployment/Delivery

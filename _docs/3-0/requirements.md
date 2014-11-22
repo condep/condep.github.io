@@ -10,7 +10,7 @@ System Requirements
 ==========================
 ConDep will validate client and server PowerShell versions and that it can remotely communicate with the configured servers before doing any actual work on them. It will however not validate operating system versions as defined in the General requirements below. Some operations might work on OS versions lower than defined, but not all.
 
-Windows Server 8 is enabled for Windows PowerShell remoting by default.
+Windows Server 2012 ans Windows 8 is enabled for Windows PowerShell remoting by default.
 If the settings are changed, you can restore the default settings by
 by running the Enable-PSRemoting cmdlet.
 
