@@ -8,10 +8,7 @@ permalink: /docs/3-0/quick-start/
 
 Quick Start
 ===========
-Some Text..
-
-asdfasdf asdlfkjals df jalskj df
-asldkfjas flkja sdlf
+Coming soon...
 
 {% highlight csharp %}
 public class CredSSPTest : Artifact.Remote
