@@ -41,6 +41,6 @@ Should You wish to submit work that is not Your original creation, You may submi
 
 8. You agree to notify ConDep of any facts or circumstances of which you become aware that would make these representations inaccurate in any respect.
 
-{% include contact.html %}
+{% include contrib_form.html %}
 
 </div>
