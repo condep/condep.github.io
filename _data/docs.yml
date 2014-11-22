@@ -18,38 +18,9 @@
   - load-balancer
 
 - title: Operations
-  children:
-  - title: Local
-    docs:
-    - operations/local/http-get
-    - operations/local/pre-compile
-    - operations/local/transform-config
-  - title: Deployment
-    docs:
-    - operations/deployment/directory
-    - operations/deployment/file
-    - operations/deployment/iis-web-application
-    - operations/deployment/nservicebus-endpoint
-    - operations/deployment/ssl-certificate-from-file
-    - operations/deployment/ssl-certificate-from-store
-    - operations/deployment/windows-service
-    - operations/deployment/windows-service-with-installer
-  - title: Execution
-    docs:
-    - operations/execution/dos-command
-    - operations/execution/powershell
-  - title: Infrastructure
-    docs:
-    - operations/infrastructure/iis
-    - operations/infrastructure/iis-app-pool
-    - operations/infrastructure/iis-web-app
-    - operations/infrastructure/iis-web-site
-    - operations/infrastructure/restart
-    - operations/infrastructure/windows
-  - title: Installation
-    docs:
-    - operations/installation/custom
-    - operations/installation/msi
+  docs:
+  - operations/condep-dsl-operations
+  - operations/condep-dsl-operations-aws
 
 - title: Extending
   docs:
