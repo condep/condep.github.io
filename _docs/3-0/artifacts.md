@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Working with Artifacts
+title: Artifacts
 permalink: /docs/3-0/artifacts/
 ---
 

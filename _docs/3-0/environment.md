@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Environment Configuration
+title: Environments
 permalink: /docs/3-0/environment/
 ---
 

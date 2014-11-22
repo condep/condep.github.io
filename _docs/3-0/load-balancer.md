@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Load Balancer integration
+title: Load Balancer
 permalink: /docs/3-0/load-balancer/
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Using ConDep.exe
+title: ConDep.exe
 permalink: /docs/3-0/condep-exe/
 ---
 
