@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: ConDep.Dsl.Operations
+title: Core Operations
 permalink: /docs/3-0/operations/condep-dsl-operations/
 ---
 
