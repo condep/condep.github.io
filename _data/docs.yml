@@ -4,7 +4,6 @@
   - new
   - requirements
   - security
-  - quick-start
 
 - title: Philosophy
   docs:
@@ -12,8 +11,9 @@
 
 - title: Usage
   docs:
-  - artifacts
+  - quick-start
   - environment
+  - artifacts
   - condep-exe
   - load-balancer
 
@@ -21,9 +21,9 @@
   children:
   - title: Local
     docs:
+    - operations/local/http-get
     - operations/local/pre-compile
     - operations/local/transform-config
-    - operations/local/web-request
   - title: Deployment
     docs:
     - operations/deployment/directory
@@ -55,7 +55,3 @@
   docs:
   - custom-operations
   - custom-loadbalancer
-
-- title: Contributing
-  docs:
-  - cla

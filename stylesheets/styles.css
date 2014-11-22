@@ -122,11 +122,11 @@ h2 {
   font-size: 24px;
 }
 
-h4, h5, h6 {
-  color: #e8e8e8;
+h3 {
+  font-size: 18px;
 }
 
-h3 {
+#navigation h3 {
   font-size: 18px;
   line-height: 24px;
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -168,7 +168,7 @@ strong {
 
 blockquote {
   border-left: 3px solid #61c10b;
-  margin: 0;
+  margin: 0 0 25px 0;
   padding: 0 0 0 20px;
   font-style: italic;
 }
@@ -184,7 +184,8 @@ code {
   -o-border-radius: 2px;
   -ms-border-radius: 2px;
   -khtml-border-radius: 2px;
-  border-radius: 2px;
+  border-radius: 6px;
+  background-color: #000;
 }
 
 pre {
@@ -203,12 +204,18 @@ pre {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
   overflow: auto;
   overflow-y: hidden;
+  word-wrap: normal;
 }
 pre code {
   color: #efefef;
   text-shadow: 0px 1px 0px #000;
   margin: 0;
   padding: 0;
+  white-space: pre;
+}
+
+.options-table pre code {
+  white-space: normal;
 }
 
 table {
@@ -288,7 +295,7 @@ dt {
   line-height: 22px;
   position: absolute;
   text-align: right;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 #navigation li {
@@ -357,6 +364,7 @@ dt {
 }
 
 #header nav li a {
+  font-family: 'OpenSansRegular', 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #61c10b;
   -webkit-border-radius: 5px; 
   -moz-border-radius: 5px; 
@@ -492,6 +500,12 @@ section li a {
   color: #fff;
 } 
 
+.doc li a {
+  color: #afad33;
+  font-weight: 400;
+  text-decoration: none;
+} 
+
 section #title {
   border: 0;
   outline: none;
@@ -519,6 +533,18 @@ section .preliminary {
   font-size: 11px;
   text-align: right;
 }
+
+.doc .version {
+  color: #d7cfbe;
+  font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 11px;
+  text-align: right;
+  right: 10px;
+  position: absolute;
+  top: 6px;
+}
+
 section #title .credits {
   font-size: 11px;
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
