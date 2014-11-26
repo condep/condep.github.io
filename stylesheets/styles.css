@@ -242,6 +242,7 @@ td {
   text-align: left;
   padding: 5px 10px;
   border-bottom: 1px solid #434343;
+  vertical-align: top;
 }
 
 hr {
@@ -540,8 +541,8 @@ section .preliminary {
   font-weight: normal;
   font-size: 11px;
   text-align: right;
-  right: 10px;
   position: absolute;
+  right: 10px;
   top: 6px;
 }
 

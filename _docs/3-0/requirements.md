@@ -50,6 +50,7 @@ From Microsoft ([http://msdn.microsoft.com/en-us/library/aa384372(v=vs.85).aspx]
 > If a computer is upgraded to WinRM 2.0, the previously configured 
 > listeners are migrated and still receive traffic.
 
+The ConDep Node by default listens on TCP port 4444 using SSL.
 
 ## Credentials
 

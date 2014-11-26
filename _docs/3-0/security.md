@@ -171,4 +171,6 @@ References:
 [http://msdn.microsoft.com/en-us/library/ee309365(v=vs.85).aspx](Reference)
 
 ### ConDep Node
-ConDep Node is a self hosted HTTP Web API running as a Windows Service on all remote servers ConDep communicate with. ConDep automatically deploys the Node the first time it talks to a new server, and whenever the version of the Node has changed. The node (or service) does not run on the servers unless ConDep is executing remote operations on it. 
+ConDep Node is a self hosted HTTP Web API running as a Windows Service on all remote servers ConDep communicate with. ConDep automatically deploys the Node the first time it talks to a new server, and keeps it updated with the latest version used by the client. The node (or service) does not run on the servers unless ConDep is executing remote operations on it. 
+
+The node by default runs over SSL on port 4444. If you need to change the port you can do this either from the command line when executing condep.exe (using `--nodePort=VALUE`) or set it on individual servers in your `env.json` file. The server setting in `env.json` has precedence over what you pass in on the command line, but ...

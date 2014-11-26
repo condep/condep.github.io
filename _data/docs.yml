@@ -16,6 +16,7 @@
   - artifacts
   - condep-exe
   - load-balancer
+  - ci
 
 - title: Operations
   docs:
