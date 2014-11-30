@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>ConDep News</title>
+    <title>{{ page.title }}</title>
     <!--<link rel="stylesheet" href="{{ site.path }}/stylesheets/normalize.css">-->
     <link rel="stylesheet" href="{{ site.path }}/stylesheets/bootstrap.min.css">
     <link rel="stylesheet" href="{{ site.path }}/stylesheets/pygment_trac.css">
@@ -18,5 +18,23 @@
 
       ga('create', 'UA-32097202-1', 'auto');
       ga('send', 'pageview');
+    </script>
+
+    <script>
+    function init(){
+        document.getElementById('main_dropdown').onclick=function()
+        {
+            var el = document.getElementById('main_horizontal');
+            if(el && el.style.visibility == 'visible') {
+                el.style.display = 'none';
+                el.style.visibility = 'hidden';
+            }
+            else {
+                el.style.display = 'block';
+                el.style.visibility = 'visible';
+            }
+        };
+    }
+    window.onload=init;
     </script>
 </head>

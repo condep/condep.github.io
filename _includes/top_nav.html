@@ -1,5 +1,5 @@
 <nav>
-  <ul>
+  <ul id="main_horizontal">
     <li class="{% if page.overview %}current{% endif %}">
     	<a href="/">Home</a>
     </li>
@@ -10,7 +10,15 @@
     	<a href="/docs/3-0/">Documentation</a>
     </li>
     <li class="{% if page.url contains '/contribute/' %}current{% endif %}">
-    	<a href="/contribute/">Contribute</a>
+        <a href="/contribute/">Contribute</a>
+    </li>
+    <li class="{% if page.url contains '/license/' %}current{% endif %}">
+        <a href="/license/">License</a>
+    </li>
+    <li class="{% if page.url contains '/contact/' %}current{% endif %}">
+        <a href="/contact/">contact</a>
     </li>
   </ul>
+
+  <div id="main_dropdown"><span>☰</span></div>
 </nav>
