@@ -15,12 +15,12 @@ Native to ConDep is Continuous Deployment (hence the name). We've made it very e
 ###Infrastructure as Code
 ConDep started as a pure deployment tool, but over time evolved into a complete infrastructure management tool (sometimes referred to as Infrastructure as Code). So what does "infrastructure management" mean? In short, it means it can do anything from bootstrapping virtual servers (typically in the cloud) to configuring and installing software on Windows Servers. Since ConDep is built specifically to tackle the challenges on Windows, the most common tasks are made really easy to do. Examples of Infrastructure Operations are IIS configuration, SSL certificate management, turning Windows features on/off, software installations (like MSI's) and rebooting servers.
 
-<img src="../../../images/condep_arch2.png" class="img-align-right" style="shape-outside: url(../../../images/condep_arch2.png);shape-image-threshold: 0.1;">
+<img src="../../../images/condep_arch3.png" class="img-align-right" style="shape-outside: url(../../../images/condep_arch3.png);shape-image-threshold: 0.1;">
 
 ### Environments, Tiers, Servers and Artifacts
-ConDep has the concept of Environments and Tiers. In short, Environments have Tiers, and Tiers have Servers (see drawing). Many organizations have multiple environments like test, qa and prod. Within your environment configuration you specify the tiers you have (web-tier, app-tier, database-tier etc) and which servers are located in these tiers. 
+ConDep has the concept of [Environments](../environment/) and [Tiers](../environment/). In short, Environments have Tiers, and Tiers have Servers (see drawing). Many organizations have multiple environments like test, qa and prod. Within your environment configuration you specify the tiers you have (web-tier, app-tier, database-tier etc) and which servers are located in these tiers. 
 
-Then you create your Artifacts. This is where you use the ConDep Domain Specific Language to instrument what to do for a certain Artifact. An Artifact could be deploying an web-application or configure a Web Server. It's up to you what you do inside an artifact. Artifacts can be linked to Tiers.
+Then you create your [Artifacts](../artifacts/). This is where you use the ConDep Domain Specific Language to instrument what to do for a certain Artifact. An Artifact could be deploying an web-application or configure a Web Server. It's up to you what you do inside an artifact. Artifacts can be linked to Tiers.
 
 When you execute ConDep you specify which Artifact to execute and to which Environment. E.g. you could execute your Artifact for your Web Application which is linked to the Web-Tier in your Prod environment. Your Web Application will then be deployed to all servers in the Web-Tier of your Prod environment.
 

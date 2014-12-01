@@ -60,7 +60,7 @@ public class MyApp : Artifact.Local
         onLocalMachine.TransformConfigFile(
             configDirPath: @"C:\Apps\MyApp\", 
             configName: "myapp.config",
-            transformName: "myapp.dev.config"
+            transformName: "myapp." + settings.Options.Environment + ".config"
         );
 
         onLocalMachine.ToEachServer(server => 
