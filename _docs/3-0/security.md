@@ -11,11 +11,11 @@ Security
 
 Security in ConDep relates to two main topics:
 
-* [Encrypting configuration files](#config) 
+* [Encrypting configuration files](#config)
 * [Encrypting remote communication](#communication)
 
 ## <a name="config"></a>Configuration Encryption
-Environment configuration files typically contains user names and passwords and other sensitive data. To prevent this data to be added to source control or visible to anyone that comes by the file, ConDep offers a simple command line switch for encryption/decryption. 
+Environment configuration files typically contains user names and passwords and other sensitive data. To prevent this data to be added to source control or visible to anyone that comes by the file, ConDep offers a simple command line switch for encryption/decryption.
 
 Before encryption:
 
@@ -27,7 +27,7 @@ Before encryption:
       "Name" : "ec2-54-216-139-21.eu-west-1.compute.amazonaws.com"
     }
   ],
-  "DeploymentUser": 
+  "DeploymentUser":
   {
     "UserName": "Administrator",
     "Password": "ReallySecureP@$$w0rd :-)"
@@ -67,7 +67,7 @@ To encrypt `SomeKey`'s `MySensitiveValue`, just encapsulate it with `encrypt` li
 
 {% highlight json %}
 {
-  "SomeKey": 
+  "SomeKey":
   {
     "encrypt" : "MySensitiveValue"
   },
@@ -117,7 +117,7 @@ Since ConDep don't allow you to specify authentication type, traffic will always
 <div class="note warning">
 	<h2>When using ConDep outside a Windows Domain, we recommend using SSL</h2>
   <p>
-  	Even though traffic will be encrypted through PowerShell, the authenticity of the remote computer cannot be guarantied when both or one of the computers are NOT in a Windows Domain. 
+  	Even though traffic will be encrypted through PowerShell, the authenticity of the remote computer cannot be guarantied when both or one of the computers are NOT in a Windows Domain.
 	</p>
 </div>
 
@@ -135,7 +135,7 @@ To tell ConDep to use SSL, set `"SSL" : "true"` for the remote computer in the e
 }
 {% endhighlight %}
 
-If you still decide against using SSL, you will have to add the remote computer to WinRM's `TrustedHosts` list. 
+If you still decide against using SSL, you will have to add the remote computer to WinRM's `TrustedHosts` list.
 
 To do this using `winrm.exe` on your client:
 
@@ -160,7 +160,7 @@ or
 Set-Item -Path WSMan:\localhost\Client\TrustedHosts -Value '*'
 {% endhighlight %}
 
-References: 
+References:
 
 * [WinRM (Windows Remote Management) Troubleshooting](http://blogs.technet.com/b/jonjor/archive/2009/01/09/winrm-windows-remote-management-troubleshooting.aspx) by JonJor
 * [Monitoring with Windows Remote Management (WinRM) and Powershell Part I](https://www.myotherpcisacloud.com/post/2012/01/30/Monitoring-with-Windows-Remote-Management-(WinRM)-and-Powershell-Part-II.aspx) by Ryan Ries
@@ -170,7 +170,7 @@ References:
 ### CredSSP
 [http://msdn.microsoft.com/en-us/library/ee309365(v=vs.85).aspx](Reference)
 
-### ConDep Node
-ConDep Node is a self hosted HTTP Web API running as a Windows Service on all remote servers ConDep communicate with. ConDep automatically deploys the Node the first time it talks to a new server, and keeps it updated with the latest version used by the client. The node (or service) does not run on the servers unless ConDep is executing remote operations on it. 
+### <a name="node"></a>ConDep Node
+ConDep Node is a self hosted HTTP Web API running as a Windows Service on all remote servers ConDep communicate with. ConDep automatically deploys the Node the first time it talks to a new server, and keeps it updated with the latest version used by the client. The node (or service) does not run on the servers unless ConDep is executing remote operations on it.
 
 The node by default runs over SSL on port 4444. If you need to change the port you can do this either from the command line when executing condep.exe (using `--nodePort=VALUE`) or set it on individual servers in your `env.json` file. The server setting in `env.json` has precedence over what you pass in on the command line, but ...
