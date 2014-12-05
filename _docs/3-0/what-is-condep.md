@@ -10,7 +10,7 @@ permalink: /docs/3-0/what-is-condep/
 ConDep is a open source infrastructure configuration and deployment DSL (Domain Specific Language) specifically targeted to (but not limited to) the Windows Server platform. If your familiar with tools like Chef and Puppet, ConDep does very much the same, but with native support for Windows.
 
 ###Continuous Deployment/Delivery
-Native to ConDep is Continuous Deployment (hence the name). We've made it very easy to continuously deploy your software to your infrastructure - whether than's a web server, application server, database server, or any other type of server with a Windows Server OS.
+Native to ConDep is Continuous Deployment (hence the name). We've made it very easy to continuously deploy your software to your infrastructure - whether that's a web server, application server, database server, or any other type of server with a Windows Server OS.
 
 ###Infrastructure as Code
 ConDep started as a pure deployment tool, but over time evolved into a complete infrastructure management tool (sometimes referred to as Infrastructure as Code). So what does "infrastructure management" mean? In short, it means it can do anything from bootstrapping virtual servers (typically in the cloud) to configuring and installing software on Windows Servers. Since ConDep is built specifically to tackle the challenges on Windows, the most common tasks are really easy to do. Examples of Infrastructure Operations are IIS configuration, SSL certificate management, turning Windows features on/off, software installations (like MSI's) and rebooting servers.
