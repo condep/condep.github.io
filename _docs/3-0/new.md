@@ -41,4 +41,4 @@ The most important part however was that 3.0 introduced a whole set of new Infra
 
 ### ConDep.Dsl 3.0.3
 
-* Fixed a bug when Tiers was used in the Environment file preventing execution of remote operations ([bug #4](https://github.com/condep/condep-dsl/issues/4)).
+* Fixed a bug when Tiers was used in the Environment file preventing execution of remote operations ([bug #4](https://github.com/condep/condep-dsl/issues/4)). Thanks to [@rubenmamo](https://github.com/rubenmamo) for reporting bug and validating fix. 
