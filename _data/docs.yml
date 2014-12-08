@@ -18,7 +18,7 @@
   - load-balancer
   - ci
 
-- title: Operations
+- title: DSL Reference
   docs:
   - operations/condep-dsl-operations
   - operations/condep-dsl-operations-aws
