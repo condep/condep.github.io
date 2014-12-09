@@ -104,6 +104,8 @@ Example: For your Development environment, you could add a `dev.env.json` file, 
 }
 ```
 
+> See the [Environments](/docs/3-0/environment/) section for more details on environment configuration.
+
 ## 4. Build the Solution, and execute your operations
 
 To run the operations shown above, build your solution and open a Command Prompt. In the Command Prompt, change directory (`cd`) to: `[your_project_path]\bin\debug\`. In this folder, you'll find a copy of `condep.exe`. Run the following command:
