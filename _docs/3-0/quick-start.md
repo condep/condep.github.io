@@ -12,7 +12,7 @@ Quick Start
 There are four simple steps to follow in order to define the Operations you want to execute with ConDep:
 
 1. Create a Visual Studio project and add the `ConDep` package via `NuGet`.
-2. Add a class inheriting from `Artifact.Local` or `Artifact.Remote` and create a deployment operation using ConDep's DSL.
+2. Add a class inheriting from `Artifact.Local` or `Artifact.Remote` and use the ConDep DSL to execute local and/or remote Operations.
 3. Add a `[env].env.json` file (e.g. `dev.env.json`) containing information about your environment to the project.
 4. Build your solution, and run `ConDep.exe` to deploy it.
 
@@ -33,11 +33,15 @@ If you want to install a pre-release of ConDep, add `-pre` to the end of the com
 	</p>
 </div>
 
-## 2. Define your Operations
+## 2. Define your Artifact
+
+An Artifact represents the deployment of one (or more) parts of your application and its required infrastructure. For a web application for instance, you want to first create an Artifact for the web server, making sure all required components are configured and installed. For that you want to have a separate Artifact class (for instance, MyWebServer). Then you want to deploy your web application with its required components, like a web application and a windows service, to your web server. For this you should create two artifact classes (for instance, MyWebApp and MyWindowsService).
+
+In the example below we assume you have a server available already, and want to deploy an application to it. In a real world example you would want to also configure the server infrastructure and maybe even bootstrap the server using ConDep. 
+
+Most of the time you want to run operations remotely on the server. In these cases, inherit from the `Artifact.Remote`. In cases where you need **also** to run operations locally (like transforming a .NET config file), inherit from `Artifact.Local` instead. You can still use `Artifact.Local` and use remote operations, but you need to call into `onLocalMachine.ToEachServer()`.
 
 Add a new class to your project (for example, `MyApp`).
-
-Most of the time you want to run operations remotely on the server. In these cases, inherit from the `Artifact.Remote`. In cases where you need **also** to run operations locally (like transforming a .NET config file), inherit from `Artifact.Local` instead. You can still use `Artifact.Local` and use remote operations, but you need to call into `local.OnRemote`.
 
 Here's a sample that uses the [Deploy Directory](/docs/3-0/operations/deployment/directory/) Operation
 inheriting from `Artifact.Remote`:
