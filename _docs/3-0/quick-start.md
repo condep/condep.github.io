@@ -20,16 +20,16 @@ There are four simple steps to follow in order to define the Operations you want
 
 Create a new Visual Studio Project in a new Solution. Using the Package Manager Console (NuGet):
 
-```powershell
+{% highlight powershell %}
 install-package condep
-```
+{% endhighlight %}
 
 If you want to install a pre-release of ConDep, add `-pre` to the end of the command.
 
 <div class="note warning">
 	<h2>Avoid mixing ConDep with your existing projects</h2>
   <p>
-		We recommend you create and maintain a separate Visual Studio Solution for your ConDep code. This will avoid conflicts with other NuGet packages from other projects, and help keep your deployment and infrastructure code separate from your applications(s).
+		We recommend you create and maintain a separate Visual Studio Solution for your ConDep code. This will avoid conflicts with other NuGet packages from other projects, and help keep your deployment and infrastructure code separate from your applications.
 	</p>
 </div>
 
@@ -42,7 +42,7 @@ Most of the time you want to run operations remotely on the server. In these cas
 Here's a sample that uses the [Deploy Directory](/docs/3-0/operations/deployment/directory/) Operation
 inheriting from `Artifact.Remote`:
 
-```csharp
+{% highlight csharp %}
 public class MyApp : Artifact.Remote
 {
     public override void Configure(IOfferRemoteOperations server, ConDepSettings settings)
@@ -53,12 +53,12 @@ public class MyApp : Artifact.Remote
         );
     }
 }
-```
+{% endhighlight %}
 
 Here's the same Directory Deployment Operation when inheriting from `Artifact.Local`;
 this includes a local [Transform Configuration](/docs/3-0/operations/local/transform-config/) Operation:
 
-```csharp
+{% highlight csharp %}
 public class MyApp : Artifact.Local
 {
     public override void Configure(IOfferLocalOperations onLocalMachine, ConDepSettings settings)
@@ -76,7 +76,7 @@ public class MyApp : Artifact.Local
             ));
     }
 }
-```
+{% endhighlight %}
 
 > See the [Operations](/docs/3-0/operations/) section for more details on the 20+ built-in Operations.
 
@@ -88,7 +88,7 @@ Example: For your Development environment, you could add a `dev.env.json` file, 
 
 > If you're using Visual Studio, remember to set the property `Copy to Output Directory` for this file to `Copy if newer`.
 
-```json
+{% highlight json %}
 {
   "Servers" :
   [
@@ -102,7 +102,7 @@ Example: For your Development environment, you could add a `dev.env.json` file, 
     "Password": "********"
   }
 }
-```
+{% endhighlight %}
 
 > See the [Environments](/docs/3-0/environment/) section for more details on environment configuration.
 
@@ -110,8 +110,8 @@ Example: For your Development environment, you could add a `dev.env.json` file, 
 
 To run the operations shown above, build your solution and open a Command Prompt. In the Command Prompt, change directory (`cd`) to: `[your_project_path]\bin\debug\`. In this folder, you'll find a copy of `condep.exe`. Run the following command:
 
-```bat
+{% highlight bat %}
 condep.exe deploy [your project assembly name].dll dev MyApp
-```
+{% endhighlight %}
 
 For help using this command, run `condep.exe help deploy` or just `condep.exe` to see all available commands.
