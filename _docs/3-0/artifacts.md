@@ -1,13 +1,15 @@
 ---
 layout: doc
 title: Artifacts
+prev_section: environment
+next_section: condep-exe
 permalink: /docs/3-0/artifacts/
 ---
 
 Working with Artifacts
 ======================
 
-Artifacts is what instrument the Operations you use in ConDep to automate your deployments and/or infrastructure.
+Artifacts is what instrument the Operations in the ConDep DSL to automate your deployments and/or infrastructure.
 
 There are two Artifact classes available to use in ConDep:
 
@@ -125,3 +127,46 @@ public class MyService : Artifact.Remote
 {% endhighlight %}
 
 The above code will only execute its Operations on Servers located under the associated Tier. The `MyApp` Artifact will deploy to `web01.prod.local` and `web02.prod.local`, while `MyService` Artifact will use `app01.prod.local` and `app02.prod.local`.
+
+## Adding dependencies between Artifacts
+
+Artifacts can depend on other Artifacts. In the example below the MyApp Artifact depends on MyServer Artifact. ConDep will then make sure to execute the MyServer Artifact before the MyApp Artifact.
+
+{% highlight csharp %}
+public class MyApp : Artifact.Remote, IDependOn<MyServer>
+{
+    public override void Configure(IOfferRemoteOperations server, ConDepSettings settings)
+    {
+      ...
+    }
+}
+{% endhighlight %}
+
+The execution order of the above example will be:
+
+`MyServer Artifact` <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> `MyApp Artifact`
+
+If you depend on Artifacts that has their own dependencies, those Artifact dependencies will be executed prior to your Artifact. 
+
+You can also define multiple Artifact dependencies like this:
+
+{% highlight csharp %}
+public class MyApp : Artifact.Remote, IDependOn<MyServer>, IDependOn<MyWinService>>
+{
+    public override void Configure(IOfferRemoteOperations server, ConDepSettings settings)
+    {
+      ...
+    }
+}
+{% endhighlight %}
+
+The execution order of the above example will be:
+
+`MyServer Artifact` <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> `MyWinService Artifact` <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> `MyApp Artifact`
+
+<div class="note warning">
+	<h2>Use with care</h2>
+  <p>
+  	Having lots of Artifact dependencies will add complexity and potentially make it impossible to know the actual execution order of Artifacts, so don't overuse.
+	</p>
+</div>

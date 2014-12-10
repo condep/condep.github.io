@@ -4,12 +4,27 @@ title: Contribute
 permalink: /contribute/
 ---
 
-Contributor License Agreement
-=============================
+Contribute
+==========
+
+## How to contribute 
+
+1. Read and fill out the Contributor License Agreement below
+2. Fork the appropriate ConDep repository found here: [https://github.com/condep](https://github.com/condep)
+3. Send us a [pull request](http://yangsu.github.io/pull-request-tutorial/) 
+
+## Contributor License Agreement
 
 In order to clarify the intellectual property rights in the project, and to grant licenses to the project to others, ConDep requires that you accept this Contributor License Agreement (“Agreement”). This license is for your protection as a Contributor as well as the protection of ConDep, its users, and its licensees; you may still license your own Contributions under other terms.
 
-If you have any questions regarding this agreement, please use this contact form.
+If you have any questions regarding this agreement, please [contact us](../contact/).
+
+<div class="note info">
+	<h2>Why this contributor license agreement?</h2>
+  <p>
+		If we just accepted your contributions without clarifying intellectual property rights, we would not be allowed to use your contribution. So before sending us any pull requests, please read through the Contributor License Agreement below and fill out the form. Thank you for supporting ConDep and making it even better!
+	</p>
+</div>
 
 ###Please read the contributor license and sign electronically by filling out the form below.
 

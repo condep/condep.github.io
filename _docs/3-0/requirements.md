@@ -2,7 +2,7 @@
 layout: doc
 title: System Requirements
 prev_section: new
-next_section: security
+next_section: quick-start
 permalink: /docs/3-0/requirements/
 ---
 

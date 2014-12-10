@@ -3,25 +3,31 @@
   - what-is-condep
   - new
   - requirements
-  - security
+  - quick-start
 
 - title: Philosophy
   docs:
+  - terms
   - push-based
 
-- title: Usage
+- title: Components
   docs:
-  - quick-start
   - environment
   - artifacts
   - condep-exe
   - load-balancer
   - ci
 
-- title: DSL Reference
+- title: Reference
   docs:
+  - env-reference
   - operations/condep-dsl-operations
   - operations/condep-dsl-operations-aws
+
+- title: Security
+  docs:
+  - encr-remote-com
+  - env-encryption
 
 - title: Extending
   docs:

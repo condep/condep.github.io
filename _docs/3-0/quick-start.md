@@ -1,8 +1,8 @@
 ---
 layout: doc
-title: Quick Start
-prev_section: security
-next_section: push-based
+title: Getting Started
+prev_section: requirements
+next_section: terms
 permalink: /docs/3-0/quick-start/
 ---
 
