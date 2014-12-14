@@ -41,4 +41,8 @@ The most important part however was that 3.0 introduced a whole set of new Infra
 
 ### ConDep.Dsl 3.1.3
 
-* Fixed a bug when Tiers was used in the Environment file preventing execution of remote operations ([bug #4](https://github.com/condep/condep-dsl/issues/4)). Thanks to [@rubenmamo](https://github.com/rubenmamo) for reporting bug and validating fix. 
+* Fixed a bug releated to Tiers in env.json. If Tiers was used in the Environment file, it prevented execution of remote operations ([bug #4](https://github.com/condep/condep-dsl/issues/4)). Thanks to [@rubenmamo](https://github.com/rubenmamo) for reporting bug and validating fix. 
+
+### ConDep.Dsl.Operations 3.1.1
+
+* Fixed a bug in MSI and Custom installers where validation of existing installation was not correct (re-installed even if already installed). Thanks to [@kjelliverb](https://github.com/condep/condep-dsl-operations/pulls/kjelliverb) for sorting this out. 
