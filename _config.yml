@@ -1,6 +1,8 @@
 markdown: kramdown
 highlighter: pygments
 
+github_url: https://github.com/condep/condep.github.io/edit/master
+
 collections:
   docs:
     output: true
