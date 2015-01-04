@@ -302,6 +302,10 @@ dt {
 
 #navigation li {
   list-style: none;
+  margin-bottom: 10px;
+  font-variant: small-caps;
+  font-size: 13pt;
+  line-height: 1;
 }
 
 #navigation li.current a:after { 
@@ -432,8 +436,12 @@ section.doc {
   margin-left: 240px;
   margin-right: 30px;
   background-color: #383838;
-  min-height: 900px;
+  min-height: 1200px;
   max-width: none;
+}
+
+section.doc #disqus_thread {
+  padding-top: 50px;
 }
 
 section .cla {
@@ -565,6 +573,14 @@ section .preliminary {
   position: absolute;
   right: 70px;
   top: 6px;
+}
+
+.doc h2 {
+  border-bottom: 1px solid #555;
+}
+
+.doc .note h2 {
+  border-bottom: none;
 }
 
 section #title .credits {
