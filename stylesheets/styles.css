@@ -454,6 +454,10 @@ section .cla {
   border-bottom: 1px solid #252525;
 }
 
+#news article {
+  padding-bottom: 30px;
+}
+
 .cla ol { font-style:italic; font-size:24px; color:#61c10b;  }
 .cla ol li { list-style-type: decimal; }
 .cla ol li p { padding:8px; font-style:normal; font-family:Arial; font-size:13px; color:#fff; border-left: 1px solid #999; }

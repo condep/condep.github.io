@@ -1,8 +1,7 @@
 ---
 layout: doc
-title: Custom Load Balancer integration
+title: Load Balancer Integration
 permalink: /docs/3-0/custom-loadbalancer/
 ---
 
-Custom Load Balancer integration
-================================
+{% include doc_not_available.md %}

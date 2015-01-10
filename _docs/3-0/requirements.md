@@ -2,20 +2,22 @@
 layout: doc
 title: System Requirements
 prev_section: new
-next_section: quick-start
+next_section: terms
 permalink: /docs/3-0/requirements/
 ---
 
-System Requirements
-==========================
-ConDep will validate client and server PowerShell versions, and that it can remotely communicate with the configured servers before doing any actual work on them. It will **not**, however, validate operating system versions as defined in the General requirements below. Some [Operations](../condep-dsl-operations/) might work on OS versions lower than the recommended, but not all.
+ConDep will validate client and server PowerShell versions, and that it can remotely 
+communicate with the configured servers before doing any actual work on them. It will 
+**not**, however, validate operating system versions as defined in the General 
+requirements below. Some [Operations](../condep-dsl-operations/) might work on OS 
+versions lower than the recommended, but not all.
 
 Windows Server 2012 and Windows 8 are enabled for Windows PowerShell Remoting by default.
-If the settings are changed, you can restore the default settings by
-by running the `Enable-PSRemoting` cmdlet.
+If the settings are changed, you can restore the default settings by by running the 
+`Enable-PSRemoting` cmdlet.
 
-On all other supported versions of Windows, you need to run the
-`Enable-PSRemoting` cmdlet to enable Windows PowerShell Remoting.
+On all other supported versions of Windows, you need to run the `Enable-PSRemoting` cmdlet 
+to enable Windows PowerShell Remoting.
 
 ## General requirements
 <table>
@@ -37,7 +39,9 @@ On all other supported versions of Windows, you need to run the
 	</tbody>
 </table>
 
-In addition, Windows Remote Management (WinRM) must be enabled on both client and servers. You can find more information about enabling WinRM from this Microsoft article: [http://support.microsoft.com/kb/555966](http://support.microsoft.com/kb/555966)
+In addition, Windows Remote Management (WinRM) must be enabled on both client 
+and servers. You can find more information about enabling WinRM from this Microsoft 
+article: [http://support.microsoft.com/kb/555966](http://support.microsoft.com/kb/555966)
 
 ## Firewalls and Ports
 From Microsoft ( [http://msdn.microsoft.com/en-us/library/aa384372(v=vs.85).aspx](http://msdn.microsoft.com/en-us/library/aa384372(v=vs.85) ):

@@ -1,5 +1,5 @@
 ---
-layout: news
+layout: news_item
 title: New Web Site!
 author: torresdal
 category: Info

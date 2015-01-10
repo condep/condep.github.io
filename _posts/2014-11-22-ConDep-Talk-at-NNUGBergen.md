@@ -1,5 +1,5 @@
 ---
-layout: news
+layout: news_item
 title: ConDep talk @NNUGBergen
 author: torresdal
 category: Events

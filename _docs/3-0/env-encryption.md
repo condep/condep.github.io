@@ -6,10 +6,9 @@ next_section: quick-start
 permalink: /docs/3-0/env-encryption/
 ---
 
-Environment Encryption
-=======================
-
-Environment configuration files typically contains user names and passwords and other sensitive data. To prevent this data to be added to source control or visible to anyone that comes by the file, ConDep offers a simple command line switch for encryption/decryption.
+Environment configuration files typically contains user names and passwords and other 
+sensitive data. To prevent this data to be added to source control or visible to anyone 
+that comes by the file, ConDep offers a simple command line switch for encryption/decryption.
 
 Before encryption:
 
@@ -48,7 +47,10 @@ After encryption:
 }
 {% endhighlight %}
 
-The example above uses structured data known to ConDep (DeploymentUser), but what about unstructured data that is sensitive? For these cases you can encapsulate your sensitive key/value inside `encrypt`, and it will be encrypted together with the other data. Let's say you have an environment file with some json data like this:
+The example above uses structured data known to ConDep (DeploymentUser), but what about 
+unstructured data that is sensitive? For these cases you can encapsulate your sensitive 
+key/value inside `encrypt`, and it will be encrypted together with the other data. 
+Let's say you have an environment file with some json data like this:
 
 {% highlight json %}
 {

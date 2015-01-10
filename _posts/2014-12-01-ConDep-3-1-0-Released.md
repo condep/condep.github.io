@@ -1,5 +1,5 @@
 ---
-layout: news
+layout: news_item
 title: ConDep 3.1.0 Released
 author: torresdal
 category: Release

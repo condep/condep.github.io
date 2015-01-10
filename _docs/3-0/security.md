@@ -6,16 +6,16 @@ next_section: quick-start
 permalink: /docs/3-0/security/
 ---
 
-Security
-========
-
 Security in ConDep relates to two main topics:
 
 * [Encrypting configuration files](#config)
 * [Encrypting remote communication](#communication)
 
 ## <a name="config"></a>Configuration Encryption
-Environment configuration files typically contains user names and passwords and other sensitive data. To prevent this data to be added to source control or visible to anyone that comes by the file, ConDep offers a simple command line switch for encryption/decryption.
+Environment configuration files typically contains user names and passwords and 
+other sensitive data. To prevent this data to be added to source control or 
+visible to anyone that comes by the file, ConDep offers a simple command line 
+switch for encryption/decryption.
 
 Before encryption:
 
@@ -54,7 +54,10 @@ After encryption:
 }
 {% endhighlight %}
 
-The example above uses structured data known to ConDep (DeploymentUser), but what about unstructured data that is sensitive? For these cases you can encapsulate your sensitive key/value inside `encrypt`, and it will be encrypted together with the other data. Let's say you have an environment file with some json data like this:
+The example above uses structured data known to ConDep (DeploymentUser), but what 
+about unstructured data that is sensitive? For these cases you can encapsulate your 
+sensitive key/value inside `encrypt`, and it will be encrypted together with the 
+other data. Let's say you have an environment file with some json data like this:
 
 {% highlight json %}
 {
@@ -90,9 +93,12 @@ When encrypted it would look like this:
 ## <a name="communication"></a>Remote communication
 
 ### PowerShell Remoting
-ConDep use PowerShell Remoting for most of its work except transferring files (which uses the ConDep Node). Underneath PowerShell Remoting is WinRM, a Web Service for for remote interaction with Windows computers. 
+ConDep use PowerShell Remoting for most of its work except transferring files 
+(which uses the ConDep Node). Underneath PowerShell Remoting is WinRM, a Web Service 
+for for remote interaction with Windows computers. 
 
-Before we go into encryption, lets just take a look at authentication. WinRM supports 6 authentication protocols:
+Before we go into encryption, lets just take a look at authentication. WinRM supports 
+6 authentication protocols:
 
 * Basic
 * Digest
@@ -101,14 +107,19 @@ Before we go into encryption, lets just take a look at authentication. WinRM sup
 * Certificate
 * CredSSP (See own section below)
 
-For security reasons, ConDep only supports PowerShell's default authentication. Default in PowerShell means **Kerberos** if both computers are within a Domain, or **Negotiate** if not. **Negotate** will allow the two computers to settle on the strongest authentication they can both agree on (Kerberos or NTLM version x). ConDep also support **CredSSP**, which is covered in a separate section below.
+For security reasons, ConDep only supports PowerShell's default authentication. Default 
+in PowerShell means **Kerberos** if both computers are within a Domain, or **Negotiate** 
+if not. **Negotate** will allow the two computers to settle on the strongest authentication 
+they can both agree on (Kerberos or NTLM version x). ConDep also support **CredSSP**, 
+which is covered in a separate section below.
 
 So back to the reason for bringing up authentication.
 
 <div class="note info">
 	<h2>PowerShell encrypt HTTP traffic</h2>
   <p>
-		As long as <b>Kerberos</b> or <b>Negotiate</b> is in use, PowerShell will encrypt the traffic even when using plain HTTP (no SSL).
+		As long as <b>Kerberos</b> or <b>Negotiate</b> is in use, PowerShell will encrypt 
+    the traffic even when using plain HTTP (no SSL).
 	</p>
 </div>
 
@@ -117,7 +128,9 @@ Since ConDep don't allow you to specify authentication type, traffic will always
 <div class="note warning">
 	<h2>When using ConDep outside a Windows Domain, we recommend using SSL</h2>
   <p>
-  	Even though traffic will be encrypted through PowerShell, the authenticity of the remote computer cannot be guarantied when both or one of the computers are NOT in a Windows Domain.
+  	Even though traffic will be encrypted through PowerShell, the authenticity of the 
+    remote computer cannot be guarantied when both or one of the computers are NOT in a 
+    Windows Domain.
 	</p>
 </div>
 
@@ -135,7 +148,8 @@ To tell ConDep to use SSL, set `"SSL" : "true"` for the remote computer in the e
 }
 {% endhighlight %}
 
-If you still decide against using SSL, you will have to add the remote computer to WinRM's `TrustedHosts` list.
+If you still decide against using SSL, you will have to add the remote computer to 
+WinRM's `TrustedHosts` list.
 
 To do this using `winrm.exe` on your client:
 
@@ -171,6 +185,13 @@ References:
 [http://msdn.microsoft.com/en-us/library/ee309365(v=vs.85).aspx](Reference)
 
 ### <a name="node"></a>ConDep Node
-ConDep Node is a self hosted HTTP Web API running as a Windows Service on all remote servers ConDep communicate with. ConDep automatically deploys the Node the first time it talks to a new server, and keeps it updated with the latest version used by the client. The node (or service) does not run on the servers unless ConDep is executing remote operations on it.
+ConDep Node is a self hosted HTTP Web API running as a Windows Service on all remote 
+servers ConDep communicate with. ConDep automatically deploys the Node the first time it 
+talks to a new server, and keeps it updated with the latest version used by the client. 
+The node (or service) does not run on the servers unless ConDep is executing remote 
+operations on it.
 
-The node by default runs over SSL on port 4444. If you need to change the port you can do this either from the command line when executing condep.exe (using `--nodePort=VALUE`) or set it on individual servers in your `env.json` file. The server setting in `env.json` has precedence over what you pass in on the command line, but ...
+The node by default runs over SSL on port 4444. If you need to change the port you can 
+do this either from the command line when executing condep.exe (using `--nodePort=VALUE`) 
+or set it on individual servers in your `env.json` file. The server setting in `env.json` 
+has precedence over what you pass in on the command line, but ...

@@ -6,5 +6,4 @@ next_section: ci
 permalink: /docs/3-0/load-balancer/
 ---
 
-Load Balancer integration
-=========================
+{% include doc_not_available.md %}

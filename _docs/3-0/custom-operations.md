@@ -1,108 +1,142 @@
 ---
 layout: doc
-title: Custom Operations
+title: About Custom Operations
 permalink: /docs/3-0/custom-operations/
 ---
 
-Custom Operations
-=================
+The ConDep DSL have solved the difficult problems with orchestration, deployment,
+installation and remote execution on Windows. That is however not always enough.
 
-There are three types of Custom Operations in ConDep:
+Typically there are two main reasons for creating your own custom operation:
 
-* Local Operation
-* Remote Operation (Composite)
-* Remote Operation (Server Code)
+1. The functionality you need is not currently offered in the existing ConDep 
+DSL
+2. You want to group a sequence of operations which you want to reuse elsewhere,
+instead of using a separate Artifact.
 
-First we want to describe each operation type and their differences, and then we will go into the details of how you would implement each of these later in this section.
+Examples of *sequence of operations* could be the operations needed to 
+install and configure a application on your servers (like a Build Agent, ADFS or
+IIS). These applications typically requires more than a install command and 
+needs additional configuration. Another example could be company specific 
+requirements you want to group into one operation.
+
+Often you start out with an Artifact and later see that all or parts of the 
+operations you use in your Artifact can be added to a custom operation, allowing
+you (or others) to reuse the operation elsewhere.
+
+<div class="note info">
+    <h2>You will probably want to use the Remote Composite Operation</h2>
+    <p>
+        Unless you're very familiar with ConDep you will probably want to start 
+        with a <code>RemoteCompositeOperation</code>. This should take care of 
+        90-100% of your needs. If you find that it does not solve your problem, 
+        come back here and read about the other operation types.
+    </p>
+</div>
+
+<div class="note info">
+    <h2>
+        Consider contributing to the ConDep community
+    </h2>
+    <p>
+        When you create a custom operation and you realize this would benefit others 
+        in the ConDep community, we encourage you to contribute these back 
+        so others could make use of your great ideas. The ConDep repository 
+        <a href="https://github.com/condep/condep-dsl-operations-contrib">
+            <i>condep-dsl-operations-contrib</i>
+        </a> is specifically created for this purpose. And if your lucky your 
+        custom operation might be so useful that we decide to add it to the 
+        core ConDep DSL.
+    </p>
+</div>
+
+## Custom Operation Types
+
+There are four types of operations in ConDep:
+
+* [Remote Composite Operation (`RemoteCompositeOperation`)](#remote-composite-operation)
+* [Local Operation (`LocalOperation`)](#local-operation)
+* [For Each Server Operation (`ForEachServerOperation`)](#for-each-server-operation)
+* [Remote Code Operation (`RemoteServerOperation`)](#remote-code-operation)
+
+Below we describe each operation type and how they relate to the other 
+operations, but if you want to jump ahead and see example of implementation see:
+
+* [Implementing a Local Operation](../local-operation/)
+* [Implementing a For Each Server Operation](../for-each-server-operation/)
+* [Implementing a Remote Composite Operation](../remote-composite-operation)
+* [Implementing a Remote Code Operation](../remote-server-operation/)
+
+<a name="local-operation"></a>
+
+## Remote Composite Operation
+
+Allows you to author a new Operation by combining existing remote Operations. A 
+**Remote Composite Operation** gives you access to ConDep's DSL for remote 
+Operations (just like Artifacts). Local Operations will not be available. 
+
+The most common usage is to use the remote PowerShell Operation available in the
+remote DSL to execute your custom script, typically combined with deploy 
+operations.
+
+This is the most common and easiest custom Operation to author in ConDep.
+
+See [Implementing a Remote Composite Operation](../remote-composite-operation) 
+for more details.
 
 ## Local Operation
 
-A **Local Operation** is a operation that executes locally. Or more accurately, a operation that is executed on the ConDep host (where `ConDep.exe` is executed) and not on any of the defined target servers in your [environments](../environment/). Inherit from the `LocalOperation` class to create your own **Local Operation**. 
+Runs on the same machine that runs `condep.exe` rather than logging in to a 
+remote server to run the operation. This also means it only runs once and 
+not for every server in your Environment(/Tier).
 
-Here's two examples to illustrate two quite different **Local Operations**:
+Here's two **Local Operations** in [ConDep.Dsl.Operations](https://github.com/condep/condep-dsl-operations) 
+that illustrate two quite different **Local Operations**:
 
 Example 1:
 
-> The [`TransformConfigFile`](https://github.com/condep/condep-dsl-operations/blob/master/src/ConDep.Dsl.Operations/Local/TransformConfig/TransformConfigOperation.cs) is a **Local Operation** that transforms .NET configuration files. It is **Local** because it runs on the ConDep host, and transform .NET configurations files located on that host. This is quite simple and logical.
+> The [`TransformConfigFile`](https://github.com/condep/condep-dsl-operations/blob/master/src/ConDep.Dsl.Operations/Local/TransformConfig/TransformConfigOperation.cs) 
+> is a **Local Operation** that transforms .NET configuration files. It is **Local** 
+> because it runs on the ConDep host, and transform .NET configurations files located 
+> on that host. This is quite simple and logical.
 
 Example 2:
 
-> The [`HttpGetOperation`](https://github.com/condep/condep-dsl-operations/blob/master/src/ConDep.Dsl.Operations/Local/WebRequest/HttpGetOperation.cs) is also a **Local Operation**, that execute HTTP GET operations to defined URL's. But how can this be a **Local Operation** when it execute remote URI's? That the operation calls remote URI's using HTTP GET is a implementation detail for ConDep. The only thing that matters for ConDep is where it is executed; which is locally on the ConDep host, as oppose to on any of your servers in your defined environments.
+> The [`HttpGetOperation`](https://github.com/condep/condep-dsl-operations/blob/master/src/ConDep.Dsl.Operations/Local/WebRequest/HttpGetOperation.cs) 
+> is also a **Local Operation**, that execute HTTP GET operations to defined URL's. 
+> But how can this be a **Local Operation** when it execute remote URI's? That the 
+> operation calls remote URI's using HTTP GET is a implementation detail for ConDep. 
+> The only thing that matters for ConDep is where it is executed; which is locally on 
+> the ConDep host, as oppose to on any of your servers in your defined environments.
 
-Hopefully these two examples have helped you understand what makes a **Local Operation** different from a **Remote Operation** (explained below). If not, reading about the two other **Remote** operations will hopefully make it more clear.
+See [Implementing a Local Operation](../local-operation/) for more details.
 
-## Remote Operation (Composite)
+<a name="for-each-server-operation"></a>
 
-The **Composite** version of the **Remote Operation** is a **Remote Operation** composed of one or several other **Remote Operations**. You inherit from `RemoteCompositeOperation` to create your own custom **Remote Operation**. 
+## For Each Server Operation
 
-Creating a **Composite** operation is very much like creating a [Artifact](../artifact/), since you get access to the ConDep DSL and can *compose* a new operation based of existing **Remote Operations**.
+A **For Each Server Operation** is (as its name implies) executed once for each 
+server in your Environment(/Tier). Typical usage is when you need to use some kind of 
+third party API to communicate with the server.
 
-## Remote Operation (Server Code)
+Examples of existing For Each Server Operations in [ConDep.Dsl.Operations](https://github.com/condep/condep-dsl-operations)
+are: `CopyFileOperation`, `CopyDirOperation` and `RestartComputerOperation`.
 
-The **Server Code** version of the **Remote Operation** is code that will be executed on the target server. You can write normal C# code and ConDep will take care of the complexity of getting this code to execute on the servers in your [environments](../environment/), including all dependencies in referenced Assemblies. You inherit from `RemoteServerOperation` to create your own custom **Remote Operation**.
+See [Implementing a For Each Server Operation](../for-each-server-operation/) for 
+more details.
 
-Most of the time you will want to use a **Composite** operation when you create custom operations in ConDep, but some things are still easier done in pure C# instead of for example PowerShell (like using .NET classes or calling into the WIN32 API), and this is when you reach for the **Server Code** operation. 
+<a name="remote-code-operation"></a>
 
-## Implementing a Local Operation
+## Remote Code Operation
 
-Say we wanted to have a **Local Operation** that send a Text Message (SMS), we could define it like this:
+A **Remote Code Operation** contains .NET code that will be deployed by ConDep 
+to the servers you have defined in your Environment and executed locally on 
+those servers. You will typically only need this operation type if you want to 
+execute C# code on the server, instead of using PowerShell. Some things are 
+still easier done in pure C# (like using .NET classes or calling into the 
+WIN32 API), and this is when you reach for the **Remote Code Operation**. 
 
-{% highlight csharp %}
-public class SmsOperation : LocalOperation
-{
-    private readonly string _phoneNumber;
-    private readonly string _message;
+See [Implementing a Remote Code Operation](../remote-server-operation/) for 
+more details.
 
-    public SmsOperation(string phoneNumber, string message)
-    {
-        _phoneNumber = phoneNumber;
-        _message = message;
-    }
-
-    public override void Execute(IReportStatus status, ConDepSettings settings, CancellationToken token)
-    {
-        var sms = new SmsLibrary.Sms(_phoneNumber);
-        sms.Send(_message);
-    }
-
-    public override bool IsValid(Notification notification)
-    {
-        return _message.Length <= 160;
-    }
-
-    public override string Name
-    {
-        get { return "Sms"; }
-    }
-}
-{% endhighlight %}
-
-To make this operation available in the ConDep DSL, you create an extension method:
-
-{% highlight csharp %}
-public static class SmsExtensions
-{
-    public static void Sms(this ConDep.Dsl.IOfferLocalOperations local, string phoneNumber, string message)
-    {
-        var op = new SmsOperation(phoneNumber, message);
-        Configure.Operation(local, op);
-    }
-}
-{% endhighlight %}
-
-And you can use it anywhere (like from an Artifact) like this:
-
-{% highlight csharp %}
-public class SomeArtifactUsingSms : Artifact.Local
-{
-    public override void Configure(IOfferLocalOperations onLocalMachine, ConDepSettings settings)
-    {
-        onLocalMachine.Sms("+47 99999999", "Hello from ConDep!!");
-    }
-}
-{% endhighlight %}
-
-
-## Implementing a Remote Operation using Composition
-
-## Implementing a Remote Operation using Server Code
+<a name="remote-composite-operation"></a>

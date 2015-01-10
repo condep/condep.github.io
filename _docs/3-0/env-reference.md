@@ -4,9 +4,6 @@ title: Environment Reference
 permalink: /docs/3-0/env-reference/
 ---
 
-Environment config reference
-============================
-
 <table>
   <thead>
     <tr>

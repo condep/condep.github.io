@@ -6,9 +6,6 @@ next_section: requirements
 permalink: /docs/3-0/new/
 ---
 
-What's new in version 3.0?
-==========================
-
 We believe with version 3.0 that ConDep has evolved into the best Continuous Deployment 
 platform on Windows, and we want the World to know!  
 

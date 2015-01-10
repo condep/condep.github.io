@@ -6,5 +6,4 @@ next_section: env-reference
 permalink: /docs/3-0/ci/
 ---
 
-Continuous Integration
-======================
+{% include doc_not_available.md %}
