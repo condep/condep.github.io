@@ -30,7 +30,7 @@ titled [Continuous Delivery: Reliable Software Releases through Build, Test and 
 * Push is when deployment and infrastructure changes are pushed from a central place 
   to the servers
 * Pull is when each server queries a central place for deployment and infrastructure 
-  changes, and apply the changes
+  changes, and apply the changes locally
 
 ## Deployment Pipeline
 
