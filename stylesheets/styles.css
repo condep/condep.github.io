@@ -569,14 +569,9 @@ section .preliminary {
 }
 
 .doc .version_added {
-  color: #d7cfbe;
-  font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
   font-size: 11px;
-  text-align: right;
-  position: absolute;
-  right: 10px;
-  top: 6px;
+  margin-top: -8px;
+  margin-bottom: 23px;
 }
 
 .doc .edit {
