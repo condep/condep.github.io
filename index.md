@@ -4,8 +4,8 @@ title: Home
 overview: true
 ---
 
-DevOps in a DSL
-===============
+Infrastructura as Code (IaC) specifically for Windows
+=====================================================
 
 *Everything you need to create, configure and update Windows Servers<br> - and continously deliver your applications.*
 
