@@ -1,11 +1,11 @@
 ---
 layout: doc
-title: Core Operations
-permalink: /docs/3-0/operations/condep-dsl-operations/
+title: Contrib Operations
+permalink: /docs/3-0/operations/condep-dsl-operations-contrib/
 ---
 
 <script type="text/javascript">
 <!--
-window.location = "/condep-dsl-operations/3-0/"
+window.location = "/condep-dsl-operations-contrib/3-0/"
 //-->
 </script>
