@@ -1,6 +1,7 @@
 - title: General
   docs:
   - what-is-condep
+  - faq
   - quick-start
   - new
   - requirements
@@ -24,6 +25,7 @@
   - env-reference
   - operations/condep-dsl-operations
   - operations/condep-dsl-operations-aws
+  - operations/condep-dsl-operations-contrib
 
 - title: Security
   docs:
