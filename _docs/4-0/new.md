@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc-4-0
 title: What's New in Version 4.0?
 prev_section: quick-start
 next_section: requirements
