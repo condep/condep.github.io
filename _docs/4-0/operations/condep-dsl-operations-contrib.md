@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc-4-0
 title: Contrib Operations
 permalink: /docs/4-0/operations/condep-dsl-operations-contrib/
 ---

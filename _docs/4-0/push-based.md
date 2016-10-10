@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc-4-0
 title: Push based
 prev_section: architecture
 next_section: environment

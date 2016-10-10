@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc-4-0
 title: Load Balancer
 prev_section: condep-exe
 next_section: ci

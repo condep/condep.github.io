@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc-4-0
 title: ConDep.exe
 prev_section: artifacts
 next_section: load-balancer

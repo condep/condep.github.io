@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc-4-0
 title: CI Integration
 prev_section: load-balancer
 next_section: env-reference

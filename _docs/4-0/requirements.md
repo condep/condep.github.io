@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc-4-0
 title: System Requirements
 prev_section: new
 next_section: terms

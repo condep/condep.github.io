@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc-4-0
 title: Environments
 prev_section: push-based
 next_section: artifacts

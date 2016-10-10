@@ -1,0 +1,43 @@
+- title: General
+  docs:
+  - what-is-condep
+  - faq
+  - quick-start
+  - new
+  - requirements
+  - terms
+  - best-practices
+
+- title: Architecture
+  docs:
+  - push-based
+
+- title: Components
+  docs:
+  - environment
+  - artifacts
+  - condep-exe
+  - load-balancer
+  - ci
+
+- title: Reference
+  docs:
+  - env-reference
+  - operations/condep-dsl-operations
+  - operations/condep-dsl-operations-aws
+  - operations/condep-dsl-operations-contrib
+
+- title: Security
+  docs:
+  - encr-remote-com
+  - env-encryption
+
+- title: Extending
+  docs:
+  - custom-operations
+  - local-operation
+  - for-each-server-operation
+  - remote-composite-operation
+  - remote-server-operation
+  - custom-loadbalancer
+  - convetions

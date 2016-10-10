@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc-4-0
 title: Core Operations
 permalink: /docs/3-0/operations/condep-dsl-operations/
 ---

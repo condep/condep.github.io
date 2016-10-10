@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc-4-0
 title: Artifacts
 prev_section: environment
 next_section: condep-exe

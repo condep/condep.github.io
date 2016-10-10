@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc-4-0
 title: Implementing a Remote Composite Operation
 permalink: /docs/4-0/remote-composite-operation/
 ---

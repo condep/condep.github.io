@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc-4-0
 title: Environment Reference
 permalink: /docs/4-0/env-reference/
 ---

@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc-4-0
 title: Implementing a Local Operation
 permalink: /docs/4-0/local-operation/
 ---

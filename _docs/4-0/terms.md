@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc-4-0
 title: DevOps Terminology
 prev_section: requirements
 next_section: best-practices

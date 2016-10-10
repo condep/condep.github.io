@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc-4-0
 title: About Custom Operations
 permalink: /docs/4-0/custom-operations/
 ---

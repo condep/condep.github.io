@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: doc-4-0
 title: What is ConDep?
 next_section: quick-start
 permalink: /docs/4-0/what-is-condep/
