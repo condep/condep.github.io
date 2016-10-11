@@ -10,13 +10,13 @@ ConDep is a open source infrastructure configuration and deployment DSL
 the Windows Server platform. If your familiar with tools like Chef and Puppet,
 ConDep does very much the same, but with native support for Windows.
 
-###Continuous Deployment/Delivery
+### Continuous Deployment/Delivery
 Native to ConDep is Continuous Deployment (hence the name). We've made it
 very easy to continuously deploy your software to your infrastructure -
 whether that's a web server, application server, database server, or any other
 type of server with a Windows Server OS.
 
-###Infrastructure as Code
+### Infrastructure as Code
 ConDep started as a pure deployment tool, but over time evolved into a complete
 infrastructure management tool (sometimes referred to as Infrastructure as Code).
 So what does "infrastructure management" mean? In short, it means it can do anything
@@ -44,12 +44,12 @@ For instance, you could execute your Artifact for your Web Application which is 
 to the Web Tier in your Production Environment. Your Web Application will then be deployed
 to all servers in the Web Tier of your Production Environment.
 
-###Intelligent
+### Intelligent
 Where ConDep might differ from other infrastructure management tools is its built-in
 intelligence around deployment of Web Applications. ConDep knows, for instance, what
 a Load Balancer is, and how to operate it to enable **no-downtime deployments**.
 
-###Push based
+### Push based
 ConDep is "push" based, meaning it will push infrastructure configuration and
 deployments to remote servers from a central place (like a CI server). This is
 something you need to be aware of when evaluating ConDep for your organization.
@@ -59,7 +59,7 @@ or [Puppet](http://puppetlabs.com) might help you if that's your scenario. For m
 information about ConDep's push-based model, check out
 [What does "push-based" mean?](/docs/3-0/push-based/).
 
-###Idempotent
+### Idempotent
 All [Operations](/docs/3-0/condep-dsl-operations/) in ConDep are **idempotent**,
 meaning you can run them as many times as you want and expect the same result. In
 practice, this means if configure a IIS Web Site with certain settings, and somebody
