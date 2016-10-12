@@ -36,9 +36,7 @@ After you've configured your Environments and Tiers, you use ConDep's Domain Spe
 When you execute ConDep, you specify which Runbook to execute and to which Environment. For instance, you could execute your Runbook for your Web Application which is linked to the Web Tier in your Production Environment. Your Web Application will then be deployed to all servers in the Web Tier of your Production Environment.
 
 ### Intelligent
-Where ConDep might differ from other infrastructure management tools is its built-in
-intelligence around deployment of Web Applications. ConDep knows, for instance, what
-a Load Balancer is, and how to operate it to enable **no-downtime deployments**.
+ConDep has some really nice intelligence built-in around deployment. ConDep knows, for instance, what a Load Balancer is, and how to operate it to enable **no-downtime deployments**.
 
 ### Push based
 ConDep is "push" based, meaning it will push infrastructure configuration and
