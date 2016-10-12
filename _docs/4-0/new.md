@@ -10,18 +10,15 @@ In version 4.0 we made some major improvements to how the core execution engine 
 
 In version 3.0 we explicitly invited the open source community to contribute more to ConDep, and that has paid off. We now have an active group of contributors ensuring the future for ConDep. We even have a dedicated user group in Bergen, Norway that meets regularly to contribute code, suggest improvements and fix bugs. Please contact us or send us pull requests if you want to be involved.
 
-## New features
+## Major changes
 
 ### Renamed Artifact to Runbook
-This was
+This was a long time in the waiting. It was just too confusion and not very logical to call it an Artifact when in reality it was a Runbook :-) For those unfamiliar to ConDep, a Runbook is where you define the actions to be executed by ConDep.
 
-### Changed execution model from *Delayed Execution* to *Direct Execution*.
-Previously the sequence of operations you had in your Artifact (now called Runbook) was added to
-a execution sequence and then executed at a later point. This had some implications on what you could do in
-your Runbook and sometimes caused some confusion.
+### Changed execution model from _Delayed Execution_ to _Direct Execution_.
+Previously the sequence of operations you had in your Runbook (previously named Runbook) was added to a execution sequence and then executed at a later point in time. This had some implications on what you could do in your Runbook and sometimes caused confusion. The main problem was that all Local Operations was always executed first, no matter when in your Runbook they were defined. This is no longer an issue. The current Runbook with its direct execution model will be executed as is and you can even debug it step-by-step, which was not possible before.
 
-The new Runbook will now be executed directly as is. ...
-
+### Load Balancing is now an Operation
 
 ## Breaking changes
 
