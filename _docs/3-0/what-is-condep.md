@@ -26,7 +26,7 @@ the challenges on Windows, the most common tasks are really easy to do. Examples
 Infrastructure Operations are IIS configuration, SSL certificate management, turning
 Windows features on/off, software installations (like MSI's) and rebooting servers.
 
-<img src="../../../images/condep_arch3.png" class="img-align-right" style="shape-outside: url(../../../images/condep_arch3.png);shape-image-threshold: 0.1;">
+<img src="../../../images/env_srvs_tiers.svg" class="img-align-right">
 
 ### Environments, Tiers, Servers and Artifacts
 ConDep has the concept of [Environments](../environment/) and [Tiers](../environment/).
@@ -67,7 +67,7 @@ later manually alters those settings on the server, the next time ConDep is exec
 the settings will be reverted back.
 
 This is also true for deployed files and directories. ConDep does not just copy them,
-it *synchronizes* them. So if you have deployed a folder, and someone later adds a file, 
+it *synchronizes* them. So if you have deployed a folder, and someone later adds a file,
 ConDep will remove it on next execution.
 
 That Operations are idempotent is a vital requirement for Continuous Deployment tools,
