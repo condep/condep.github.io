@@ -26,9 +26,8 @@ the challenges on Windows, the most common tasks are really easy to do. Examples
 Infrastructure Operations are IIS configuration, SSL certificate management, turning
 Windows features on/off, software installations (like MSI's) and rebooting servers.
 
-<img src="../../../images/env_srvs_tiers.svg" class="img-align-right" style="width: 50%">
-
 ### Environments, Tiers, Servers and Artifacts
+<img src="../../../images/env_srvs_tiers.svg" class="img-align-right" style="width: 50%">
 ConDep has the concept of [Environments](../environment/) and [Tiers](../environment/).
 Environments contain Tiers, and Tiers contain servers (see drawing). Many organizations
 have multiple environments (like test, QA and production). Within your Environment
