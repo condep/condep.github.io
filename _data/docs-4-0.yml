@@ -23,9 +23,6 @@
 - title: Reference
   docs:
   - env-reference
-  - operations/condep-dsl-operations
-  - operations/condep-dsl-operations-aws
-  - operations/condep-dsl-operations-contrib
 
 - title: Security
   docs:
@@ -41,3 +38,7 @@
   - remote-server-operation
   - custom-loadbalancer
   - convetions
+
+- title: Core Operations
+  docs:
+    - operations/deployment/directory
