@@ -1,13 +1,14 @@
 ---
 layout: doc-4-0
 title: Directory
-permalink: /4-0/deployment/directory/
+permalink: /4-0/deployment/directory
 version_added: 3.1.0
 ---
 
+## Directory
 Will deploy local source directory to remote destination directory. This operation does dot just copy directory content, but synchronize the the source folder to the destination. If a file already exist on destination, it will be updated to match source file. If a file exist on destination, but not in source directory, it will be removed from destination. If a file is readonly on destination, but read/write in source, destination file will be updated with read/write.
 
-## Syntax
+### Syntax
 
 {% highlight csharp %}
 Directory(string sourceDir, string destDir)
@@ -32,7 +33,7 @@ Directory(string sourceDir, string destDir)
 	</tbody>
 </table>
 
-## Code Example
+### Code Example
 
 {% highlight csharp %}
 public class MyRemoteArtifact : Artifact.Remote
