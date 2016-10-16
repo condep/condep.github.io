@@ -7,10 +7,16 @@ overview: true
 Infrastructure as Code (IaC) specifically for Windows
 =====================================================
 
-*Everything you need to create, configure and update Windows Servers<br> - and continously deliver your applications.*
-
 <div class="feature">
 	<div class="container-fluid">
+		<div class="row" style="padding-top: 40px; padding-bottom: 40px;">
+			<div class="col-sm-6">
+				<img src="images/condep_thumb_up.png" style="display: block; margin: auto; padding: 10px; width: 85%;">
+			</div>
+			<div class="col-sm-6" style="text-align: center; padding-top: 60px;">
+				<i>Everything you need to create, configure and update Windows Servers<br> - and continously deliver your applications.</i>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-sm-6">
 				<h2><img src="images/cloud.png">Bootstrap Cloud servers</h2>
