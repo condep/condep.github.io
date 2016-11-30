@@ -16,7 +16,7 @@ In version 3.0 we explicitly invited the open source community to contribute mor
 This was a long time in the waiting. It was just too confusion and not very logical to call it an Artifact when in reality it was a Runbook :-) For those unfamiliar to ConDep, a Runbook is where you define the actions to be executed by ConDep.
 
 ### Changed execution model from _Delayed Execution_ to _Direct Execution_.
-Previously the sequence of operations you had in your Runbook (previously named Runbook) was added to a execution sequence and then executed at a later point in time. This had some implications on what you could do in your Runbook and sometimes caused confusion. The main problem was that all Local Operations was always executed first, no matter when in your Runbook they were defined. This is no longer an issue. The current Runbook with its direct execution model will be executed as is and you can even debug it step-by-step, which was not possible before.
+Earlier the sequence of operations you had in your Runbook (previously named Artifact) was added to a execution sequence and then executed at a later point in time. This had some implications on what you could do in your Runbook and sometimes caused confusion. One of the main problems was that all Local Operations was always executed first, no matter when in your Runbook they were defined. This is no longer an issue. The current Runbook with its direct execution model will be executed as is and you can even debug it step-by-step, which was not possible before.
 
 ### Load Balancing is now an Operation
 
@@ -43,29 +43,6 @@ The most important part however was that 3.0 introduced a whole set of new Infra
 
 ### Version 4.0
 
-## Minor and Patch changes after 3.0
+## Minor and Patch changes after 4.0
 
-### ConDep.Dsl
-
-**3.1.3**
-
-* Fixed a bug releated to Tiers in env.json. If Tiers was used in the Environment file,
-it prevented execution of remote operations ([bug #4](https://github.com/condep/condep-dsl/issues/4)).
-Thanks to [@rubenmamo](https://github.com/rubenmamo) for reporting bug and validating fix.
-
-### ConDep.Dsl.Operations
-
-**3.1.1**
-
-* Fixed a bug in MSI and Custom installers where validation of existing installation was
-not correct (re-installed even if already installed). Thanks to
-[@kjelliverb](https://github.com/condep/condep-dsl-operations/pulls/kjelliverb) for
-sorting this out.
-
-**3.1.2**
-
-* In IISAppPoolOptions depcrecated IdentityUsername() and IdentityPassword() in favor of
-a new Identity property. This property gives simple methods for setting common identities
-like NetworkService, LocalService, LocalSystem etc. in addition to SpecificUser(). Thanks
-to [@djcrabhat](https://github.com/djcrabhat) for committing the necessary PowerShell
-script changes.
+None yet.
