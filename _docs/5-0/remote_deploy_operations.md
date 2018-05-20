@@ -1,6 +1,8 @@
 ---
 layout: doc-5-0
 title: Remote Deployment Operations
+prev_section: local_operations
+next_section: remote_exe_operations
 permalink: /docs/5-0/remote_deploy_operations/
 ---
 

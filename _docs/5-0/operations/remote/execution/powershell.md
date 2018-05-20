@@ -1,7 +1,7 @@
 ---
 layout: doc-5-0
 title: PowerShell
-permalink: /docs/5-0/remote/execution/powershell
+permalink: /docs/5-0/operations/remote/execution/powershell
 version_added: 3.1.0
 ---
 

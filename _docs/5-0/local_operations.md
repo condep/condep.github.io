@@ -1,6 +1,7 @@
 ---
 layout: doc-5-0
 title: Local operations
+next_section: remote_deploy_operations
 permalink: /docs/5-0/local_operations/
 ---
 
