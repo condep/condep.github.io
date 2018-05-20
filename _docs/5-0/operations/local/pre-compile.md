@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: PreCompile
-permalink: /docs/5-0/local/pre-compile/
+permalink: /docs/5-0/operations/local/pre-compile
 version_added: 3.1.0
 ---
 

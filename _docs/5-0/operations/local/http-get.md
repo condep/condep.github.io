@@ -1,7 +1,7 @@
 ---
 layout: doc-5-0
 title: HttpGet
-permalink: /docs/5-0/local/http-get/
+permalink: /docs/5-0/operations/local/http-get/
 version_added: 3.1.0
 ---
 
