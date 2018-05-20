@@ -10,9 +10,7 @@ More operations will come here as soon as we document them :)
 
 [Transfor Config](/docs/5-0/operations/local/transform-config)
 
-### Remote
+### Remote deployment
 
-#### Deployment
-
-[Directory](/docs/5-0/operations/remote/deployment/directory)
+[Deploy Directory](/docs/5-0/operations/remote/deployment/directory)
 
