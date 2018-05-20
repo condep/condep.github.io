@@ -21,3 +21,8 @@ More operations will come here as soon as we document them :)
 - [Deploy SSL Certificate From File](/docs/5-0/operations/remote/deployment/ssl-certificate-from-file)  
 - [Deploy SSL Certificate From Store](/docs/5-0/operations/remote/deployment/ssl-certificate-from-store)  
 - [Deploy Windows Service](/docs/5-0/operations/remote/deployment/windows-service)  
+
+### Remote execution
+
+- [DOS Command](/docs/5-0/operations/remote/execution/dos-command)  
+- [Powershell](/docs/5-0/operations/remote/executiont/powershell)  
