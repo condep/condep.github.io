@@ -164,3 +164,7 @@ condep.exe deploy [your project assembly name].dll dev MyApp
 
 For help using this command, run `condep.exe help deploy` or just `condep.exe` to see
 all available commands.
+
+### 5. A samples repository
+
+We have made a [sample repository](https://github.com/condep/condep-samples) that contains some good examples on how to use ConDep to configure servers and deploy service and applications. The example also contains some examples on extending ConDep by making your own operations.

@@ -6,3 +6,7 @@
 - title: Components
   docs:
   - load-balancer
+
+  - title: Extending
+  docs:
+  - custom-loadbalancer
