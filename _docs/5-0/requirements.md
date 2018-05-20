@@ -2,6 +2,7 @@
 layout: doc-5-0
 title: System Requirements
 prev_section: new
+next_section: terms
 permalink: /docs/5-0/requirements/
 ---
 
