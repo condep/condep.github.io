@@ -8,6 +8,11 @@
   - best-practices
   - faq
 
+- title: Architecture
+  docs:
+  - architecture
+  - push-based
+
 - title: Components
   docs:
   - load-balancer
