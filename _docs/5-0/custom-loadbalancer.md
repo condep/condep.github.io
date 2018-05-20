@@ -4,8 +4,6 @@ title: Load Balancer Integration
 permalink: /docs/5-0/custom-loadbalancer/
 ---
 
-### How to make a custom load balancer plugin with ConDep
-
 To make a custom load balancer plugin to ConDep is very easy, you just ake a class that implements the interface ILoadBalance located in the ConDep.Dsl:
 
 {% highlight csharp %}

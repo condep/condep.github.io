@@ -4,8 +4,6 @@ title: Load Balancer
 permalink: /docs/5-0/load-balancer/
 ---
 
-### Load balancing in ConDep
-
 ConDep supports deploying applications that are load balanced. Here is an example on how to deploy a directory to servers that are load balanced:
 
 {% highlight csharp %}
