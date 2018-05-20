@@ -5,6 +5,7 @@
 
 - title: Components
   docs:
+  - operations
   - load-balancer
 
 - title: Extending
