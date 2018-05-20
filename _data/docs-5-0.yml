@@ -5,9 +5,14 @@
 
 - title: Components
   docs:
-  - operations
   - load-balancer
 
 - title: Extending
   docs:
   - custom-loadbalancer
+
+- title: Core Operations
+  docs:
+    - operations/local/http-get
+    - operations/local/pre-compile
+    - operations/local/transform-config
