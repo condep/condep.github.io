@@ -2,6 +2,7 @@
 layout: doc-5-0
 title: Getting Started
 prev_section: what-is-condep
+next_section: new
 permalink: /docs/5-0/quick-start/
 ---
 

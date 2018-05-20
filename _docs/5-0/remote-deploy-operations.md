@@ -1,9 +1,9 @@
 ---
 layout: doc-5-0
 title: Remote Deployment Operations
-prev_section: local_operations
-next_section: remote_exe_operations
-permalink: /docs/5-0/remote_deploy_operations/
+prev_section: local-operations
+next_section: remote-exe-operations
+permalink: /docs/5-0/remote-deploy-operations/
 ---
 
 - [Deploy Directory](/docs/5-0/operations/remote/deployment/directory)  

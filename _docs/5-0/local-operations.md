@@ -1,8 +1,8 @@
 ---
 layout: doc-5-0
 title: Local operations
-next_section: remote_deploy_operations
-permalink: /docs/5-0/local_operations/
+next_section: remote-deploy-operations
+permalink: /docs/5-0/local-operations/
 ---
 
 - [HTTP Get](/docs/5-0/operations/local/http-get)  
