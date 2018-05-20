@@ -24,7 +24,7 @@ infrastructure management tool (sometimes referred to as Infrastructure as Code)
 ConDep has the concept of [Environments](../environment/) and [Tiers](../environment/).
 Environments contain Tiers, and Tiers contain servers (see drawing). Many organizations have multiple environments (like test, QA and production). Within your Environment configuration, you specify the Tiers it has (web-tier, app-tier, database-tier, etc), and which servers are located in these tiers.
 
-After you've configured your Environments and Tiers, you use ConDep's Domain Specific Language to create your [Runbooks](../artifacts/). A Runbook could be deploying a web-application, or configuring a Web Server. It's up to you what you do inside a Runbook.
+After you've configured your Environments and Tiers, you use ConDep's Domain Specific Language to create your [Runbooks](../runbooks/). A Runbook could be deploying a web-application, or configuring a Web Server. It's up to you what you do inside a Runbook.
 
 When you execute ConDep, you specify which Runbook to execute and to which Environment. For instance, you could execute your Runbook for your Web Application which is linked to the Web Tier in your Production Environment. Your Web Application will then be deployed to all servers in the Web Tier of your Production Environment.
 
