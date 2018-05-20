@@ -1,0 +1,80 @@
+{% include top.html %}
+  <body>
+    {% include header.html %}
+    <div id="navigation">
+      {% include navigation-5-0.html %}
+    </div>
+    <section class="doc">
+      <div id="nav_menu">☰<div id="nav_menu_text">&nbsp;Documentation</div></div>
+      <div class="version"><a href="{{ site.github_url }}/{{ page.relative_path }}">[Edit on GitHub]</a> - [Version 5.0]</div>
+      <h1>{{ page.title }}</h1>
+			{{ page.content }}
+      {% include section_nav-5-0.html %}
+      {% include disqus.html %}
+      <div class="clear"></div>
+    </section>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    {% include footer.html %}
+    <script>
+        if (typeof String.prototype.endsWith !== 'function') {
+          String.prototype.endsWith = function(suffix) {
+              return this.indexOf(suffix, this.length - suffix.length) !== -1;
+          };
+        }
+
+        function addClass(element, classToAdd) {
+          var currentClassValue = element.className;
+
+          if (currentClassValue.indexOf(classToAdd) == -1) {
+            if ((currentClassValue == null) || (currentClassValue === "")) {
+              element.className = classToAdd;
+            } else {
+              element.className += " " + classToAdd;
+            }
+          }
+        }
+
+        function removeClass(element, classToRemove) {
+          var currentClassValue = element.className;
+
+          if (currentClassValue == classToRemove) {
+            element.className = "";
+            return;
+          }
+
+          var classValues = currentClassValue.split(" ");
+          var filteredList = [];
+
+          for (var i = 0 ; i < classValues.length; i++) {
+            if (classToRemove != classValues[i]) {
+              filteredList.push(classValues[i]);
+            }
+          }
+
+          element.className = filteredList.join(" ");
+        }
+
+        document.getElementById('nav_menu').onclick=function()
+        {
+            var el = document.getElementById('navigation');
+
+            /*
+            if(el && el.className.endsWith('visible')) {
+              removeClass(el, 'visible')
+            }
+            else {
+              addClass(el, 'visible')
+            }
+            */
+            if(el && el.style.visibility == 'visible') {
+                el.style.display = 'none';
+                el.style.visibility = 'hidden';
+            }
+            else {
+                el.style.display = 'block';
+                el.style.visibility = 'visible';
+            }
+        };
+    </script>
+  </body>
+</html>

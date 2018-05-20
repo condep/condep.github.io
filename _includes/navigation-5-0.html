@@ -1,0 +1,5 @@
+{% for section in site.data.docs-5-0 %}
+  <h3>{{ section.title }}</h3>
+  {% if section.children != null %}{% for childSection in section.children %}<h4>{{ childSection.title }}</4>{% include docs_ul-5-0.html items=childSection.docs %}{% endfor %}{% endif %}
+  {% if section.docs != null %}{% include docs_ul-5-0.html items=section.docs %}{% endif %}
+{% endfor %}
