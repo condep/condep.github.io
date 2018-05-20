@@ -1,9 +1,7 @@
 ---
 layout: doc
 title: TransformConfig
-prev_section: 3-0/operations/local/pre-compile
-next_section: 3-0/operations/deployment/directory
-permalink: /3-0/local/transform-config/
+permalink: /5-0/local/transform-config/
 version_added: 3.1.0
 ---
 

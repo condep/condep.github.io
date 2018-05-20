@@ -1,7 +1,7 @@
 ---
 layout: doc-5-0
 title: Directory
-permalink: /docs/5-0/operations/deployment/directory
+permalink: /docs/5-0/operations/remote/deployment/directory
 version_added: 3.1.0
 ---
 
