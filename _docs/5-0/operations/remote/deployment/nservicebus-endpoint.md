@@ -1,7 +1,7 @@
 ---
 layout: doc-5-0
 title: NServiceBusEndpoint
-permalink: /5-0/deployment/nservicebus-endpoint/
+permalink: /docs/5-0/deployment/nservicebus-endpoint/
 version_added: 3.1.0
 ---
 
