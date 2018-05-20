@@ -1,7 +1,7 @@
 ---
-layout: doc
+layout: doc-5-0
 title: TransformConfig
-permalink: /5-0/local/transform-config/
+permalink: /docs/5-0/local/transform-config
 version_added: 3.1.0
 ---
 
