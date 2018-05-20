@@ -7,6 +7,6 @@
   docs:
   - load-balancer
 
-  - title: Extending
+- title: Extending
   docs:
   - custom-loadbalancer
