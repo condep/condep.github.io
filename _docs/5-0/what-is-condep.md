@@ -1,6 +1,7 @@
 ---
 layout: doc-5-0
 title: What is ConDep?
+next_section: quick-start
 permalink: /docs/5-0/what-is-condep/
 ---
 
