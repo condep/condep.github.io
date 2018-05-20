@@ -15,6 +15,6 @@
 
 - title: Core Operations
   docs:
-    - local_operations
-    - remote_deploy_operations
-    - remote_exe_operations
+    - local-operations
+    - remote-deploy-operations
+    - remote-exe-operations
