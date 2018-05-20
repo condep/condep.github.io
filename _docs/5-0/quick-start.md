@@ -59,7 +59,7 @@ public class MyAppDeployment : Runbook
 {
     public override void Execute(IOfferOperations dsl, ConDepSettings settings)
     {
-        dsl.Remote(server => server.Deploy.Directory(
+        dsl.Remote(remote => remote.Deploy.Directory(
                                                 sourceDir: @"C:\Apps\MyApp", 
                                                 destDir: @"E:\Apps\MyApp"));
     }
@@ -79,8 +79,48 @@ public class MyAppConfigTransformation : Runbook
 }
 {% endhighlight %}
 
-> See the [Operations](/docs/5-0/operations/) section for more details on the 20+ built-in
+> The examples above shows two operations (deploy directory and transform config). See the [Operations](/docs/5-0/operations/) section for more details on the 20+ built-in
 > Operations.
+
+The ConDep DSL provides different kinds of operations. Above you saw two exmples, Remote and Local operations.
+
+Here is a code snippet that shows what the DSL can offer:
+{% highlight csharp %}
+public class MyEnviroment : Runbook
+{
+    public override void Execute(IOfferOperations dsl, ConDepSettings settings)
+    {
+        //Local operations are executed locally on the machine that runs ConDep.exe.
+        dsl.Local.TransformConfigFile(@"C:\MyService", "app.config", "app.test.config");
+
+        //Remote operations typically do something on a remote machine. Deploys something, configures something etc.
+        dsl.Remote(remote => remote.Deploy.WindowsService(
+                                                serviceName: "MyService", 
+                                                displayName: "MyService", 
+                                                sourceDir: @"C:/Services/MySevice", 
+                                                destDir: @"E:/Services/MyService",
+                                                relativeExePath: @"E:/Services/MyService/MyService.exe"));
+
+        //Another local operation                
+        dsl.Local.TransformConfigFile(@"C:\MyWebApp", "web.config", "web.test.config");
+
+        //LoadBalance does remote operations, but allows you to loadbalance while deploying See section about load balancing for more info.    
+        dsl.LoadBalance(LoadBalancerMode.Sticky, "MyWebFarm", remote => remote.Deploy.Directory(
+                sourceDir: @"C:\Apps\MyApp",
+                destDir: @"E:\Apps\MyApp"));   
+
+        // RemoteAsync operations are, drumrole, async.
+        dsl.RemoteAsync(remote => remote.Deploy.WindowsService(
+                                                serviceName: "MyService", 
+                                                displayName: "MyService", 
+                                                sourceDir: @"C:/Services/MySevice", 
+                                                destDir: @"E:/Services/MyService",
+                                                relativeExePath: @"E:/Services/MyService/MyService.exe")); 
+    }
+}
+{% endhighlight %}
+
+The runbook above transforms configs and deploys a Windows service and a directory. All the operations are executed in the same order as in the Runbook.
 
 ### 3. Create your Environment file
 

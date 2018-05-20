@@ -40,7 +40,7 @@ public class MyRemoteOperation : Runbook
 {
     public override void Execute(IOfferOperations dsl, ConDepSettings settings)
     {
-        dsl.Remote(server => server.Deploy.Directory(
+        dsl.Remote(remote => remote.Deploy.Directory(
                                                 sourceDir: @"C:\Apps\MyApp", 
                                                 destDir: @"E:\Apps\MyApp"));
     }

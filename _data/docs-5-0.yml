@@ -2,3 +2,7 @@
   docs:
   - what-is-condep
   - quick-start
+
+- title: Components
+  docs:
+  - load-balancer
