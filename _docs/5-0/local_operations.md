@@ -1,7 +1,7 @@
 ---
 layout: doc-5-0
-title: Built-in operations
-permalink: /docs/5-0/operations/
+title: Local operations
+permalink: /docs/5-0/local_operations/
 ---
 
 More operations will come here as soon as we document them :)

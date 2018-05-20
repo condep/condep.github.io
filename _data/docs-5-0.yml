@@ -13,6 +13,4 @@
 
 - title: Core Operations
   docs:
-    - operations/local/http-get
-    - operations/local/pre-compile
-    - operations/local/transform-config
+    - local_operations

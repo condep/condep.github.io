@@ -1,7 +1,7 @@
 ---
 layout: doc-5-0
 title: DosCommand
-permalink: docs/5-0/remote/execution/dos-command/
+permalink: /docs/5-0/remote/execution/dos-command
 version_added: 3.1.0
 ---
 
