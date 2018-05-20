@@ -1,7 +1,7 @@
 ---
 layout: doc-5-0
 title: WindowsService
-permalink: /docs/5-0/deployment/windows-service/
+permalink: /docs/5-0/operations/remote/deployment/windows-service
 version_added: 3.1.0
 ---
 

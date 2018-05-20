@@ -1,7 +1,7 @@
 ---
 layout: doc-5-0
 title: File
-permalink: /docs/5-0/deployment/file/
+permalink: /docs/5-0/operations/remote/deployment/file
 version_added: 3.1.0
 ---
 

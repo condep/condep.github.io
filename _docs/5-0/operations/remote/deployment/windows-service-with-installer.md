@@ -1,7 +1,7 @@
 ---
 layout: doc-5-0
 title: WindowsServiceWithInstaller
-permalink: /docs/5-0/deployment/windows-service-with-installer/
+permalink: /docs/5-0/operations/remote/deployment/windows-service-with-installer
 version_added: 3.1.0
 ---
 

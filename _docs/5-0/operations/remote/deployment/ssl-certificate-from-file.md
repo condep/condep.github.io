@@ -1,7 +1,7 @@
 ---
 layout: doc-5-0
 title: SslCertificate().FromFile
-permalink: /docs/5-0/deployment/ssl-certificate-from-file/
+permalink: /docs/5-0/operations/remote/deployment/ssl-certificate-from-file
 version_added: 3.1.0
 ---
 

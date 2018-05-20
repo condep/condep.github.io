@@ -1,7 +1,7 @@
 ---
 layout: doc-5-0
 title: IisWebApplication
-permalink: /docs/5-0/deployment/iis-web-application/
+permalink: /docs/5-0/operations/remote/deployment/iis-web-application
 version_added: 3.1.0
 ---
 

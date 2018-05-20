@@ -8,6 +8,8 @@ More operations will come here as soon as we document them :)
 
 ### Local
 
+- [HTTP Get](/docs/5-0/operations/local/http-get)  
+- [Pre Compile](/docs/5-0/operations/local/pre-compile)  
 - [Transform Config](/docs/5-0/operations/local/transform-config)  
 
 ### Remote deployment

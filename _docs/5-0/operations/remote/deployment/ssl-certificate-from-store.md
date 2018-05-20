@@ -1,7 +1,7 @@
 ---
 layout: doc-5-0
 title: SslCertificate().FromStore
-permalink: /docs/5-0/deployment/ssl-certificate-from-store/
+permalink: /docs/5-0/operations/remote/deployment/ssl-certificate-from-store
 version_added: 3.1.0
 ---
 
