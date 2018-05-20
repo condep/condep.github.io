@@ -79,7 +79,7 @@ public class MyAppConfigTransformation : Runbook
 }
 {% endhighlight %}
 
-> The examples above shows two operations (deploy directory and transform config). See the [Operations](/docs/5-0/operations/) section for more details on the 20+ built-in
+> The examples above shows two operations (deploy directory and transform config). See the [Operations](/docs/5-0/operations) section for more details on the 20+ built-in
 > Operations.
 
 The ConDep DSL provides different kinds of operations. Above you saw two exmples, Remote and Local operations.
