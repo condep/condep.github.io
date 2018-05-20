@@ -2,6 +2,7 @@
 layout: doc-5-0
 title: What's New in Version 5.0?
 prev_section: quick-start
+next_section: requirements
 permalink: /docs/5-0/new/
 ---
 
