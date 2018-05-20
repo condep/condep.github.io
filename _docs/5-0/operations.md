@@ -1,7 +1,18 @@
 ---
 layout: doc-5-0
-title: Load Balancer
+title: Built-in operations
 permalink: /docs/5-0/operations/
 ---
 
-{% include doc_not_available.md %}
+More operations will come here as soon as we document them :)
+
+### Local
+
+[Transfor Config](/docs/5-0/operations/local/transform-config)
+
+### Remote
+
+#### Deployment
+
+[Directory](/docs/5-0/operations/remote/deployment/directory)
+
