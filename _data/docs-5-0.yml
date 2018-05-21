@@ -16,6 +16,7 @@
 - title: Components
   docs:
   - environment
+  - runbooks
   - load-balancer
 
 - title: Extending
