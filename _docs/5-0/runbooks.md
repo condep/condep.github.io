@@ -102,35 +102,35 @@ you can name them whatever you want by using a String instead.
 
 {% highlight csharp %}
 [Tier(Tier.Web)]
-public class MyApp : Artifact.Remote
+public class MyApp : Runbook
 {
-    public override void Configure(IOfferRemoteOperations server, ConDepSettings settings)
+    public override void Execute(IOfferOperations dsl, ConDepSettings settings)
     {
-        server.Deploy.Directory(
-            sourceDir: @"C:\Apps\MyApp",
-            destDir: @"E:\Apps\MyApp"
-        );
+        dsl.Remote(remote => remote.Deploy.Directory(
+                                sourceDir: @"C:\Apps\MyApp",
+                                destDir: @"E:\Apps\MyApp"
+        ));
     }
 }
 {% endhighlight %}
 
 {% highlight csharp %}
 [Tier(Tier.Application)]
-public class MyService : Artifact.Remote
+public class MyService : Runbook
 {
-    public override void Configure(IOfferRemoteOperations server, ConDepSettings settings)
+    public override void Execute(IOfferOperations dsl, ConDepSettings settings)
     {
-        server.Deploy.Directory(
-            sourceDir: @"C:\Services\MyService",
-            destDir: @"E:\Services\MyService"
-        );
+        dsl.Remote(remote => remote.Deploy.Directory(
+                                sourceDir: @"C:\Services\MyService",
+                                destDir: @"E:\Services\MyService"
+        ));
     }
 }
 {% endhighlight %}
 
 The above code will only execute its Operations on Servers located under the associated
-Tier. The `MyApp` Artifact will deploy to `web01.prod.local` and `web02.prod.local`,
-while `MyService` Artifact will use `app01.prod.local` and `app02.prod.local`.
+Tier. The `MyApp` Runbooks will deploy to `web01.prod.local` and `web02.prod.local`,
+while `MyService` Runbooks will use `app01.prod.local` and `app02.prod.local`.
 
 ## Adding dependencies between Runbooks
 
