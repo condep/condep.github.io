@@ -19,6 +19,7 @@
   - runbooks
   - condep-exe
   - load-balancer
+  - ci
 
 - title: Extending
   docs:
