@@ -21,12 +21,13 @@
   - load-balancer
   - ci
 
-- title: Extending
-  docs:
-  - custom-loadbalancer
-
 - title: Core Operations
   docs:
     - local-operations
+    - remote-config-operations
     - remote-deploy-operations
     - remote-exe-operations
+
+- title: Extending
+  docs:
+  - custom-loadbalancer
