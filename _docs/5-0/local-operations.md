@@ -1,7 +1,7 @@
 ---
 layout: doc-5-0
 title: Local operations
-next_section: remote-config-operations
+next_section: remote-base-operations
 permalink: /docs/5-0/local-operations/
 ---
 
