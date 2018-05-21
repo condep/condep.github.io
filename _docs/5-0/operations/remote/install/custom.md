@@ -1,7 +1,7 @@
 ---
 layout: doc-5-0
 title: Custom
-permalink: /docs/5-0/operation/remote/install/custom/
+permalink: /docs/5-0/operations/remote/install/custom/
 version_added: 3.1.0
 ---
 
