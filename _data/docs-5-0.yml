@@ -27,6 +27,7 @@
     - remote-config-operations
     - remote-deploy-operations
     - remote-exe-operations
+    - remote-install-operations
 
 - title: Extending
   docs:
