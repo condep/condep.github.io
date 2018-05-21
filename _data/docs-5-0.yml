@@ -17,6 +17,7 @@
   docs:
   - environment
   - runbooks
+  - condep-exe
   - load-balancer
 
 - title: Extending
