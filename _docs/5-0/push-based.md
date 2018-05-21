@@ -2,6 +2,7 @@
 layout: doc-5-0
 title: Push based
 prev_section: architecture
+next_section: environment
 permalink: /docs/5-0/push-based/
 ---
 

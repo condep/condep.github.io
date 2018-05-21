@@ -15,6 +15,7 @@
 
 - title: Components
   docs:
+  - environment
   - load-balancer
 
 - title: Extending
