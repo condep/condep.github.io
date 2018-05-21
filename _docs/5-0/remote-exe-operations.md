@@ -7,4 +7,4 @@ permalink: /docs/5-0/remote-exe-operations/
 ---
 
 - [DOS Command](/docs/5-0/operations/remote/execution/dos-command)  
-- [Powershell](/docs/5-0/operations/remote/executiont/powershell)  
+- [Powershell](/docs/5-0/operations/remote/execution/powershell)  
