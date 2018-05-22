@@ -13,3 +13,5 @@ Network architecture
 Application architecture
 
 Typical infrstructure for ConDep to operate in
+
+{% include doc_not_available.md %}
