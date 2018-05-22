@@ -157,3 +157,33 @@ public class MyApp : Runbook
 {% endhighlight %}
 
 The execution order of MyApp in the example above will be as it is in the runbook 
+
+## Using Operation results in runbook
+
+Here is an example on how to get and use a result from an operation.
+
+First we have a custom operation that checks if a directory exists on a remote computer:
+
+{% highlight csharp %}
+public class CreateDirectoryRunbook : Runbook
+{
+    public override void Execute(IOfferOperations dsl, ConDepSettings settings)
+    {
+        var path = @"c:/temp/mydir";
+        var pathExistsScript = $@"if ((Test-Path {path})) {{ return $true }} else {{ return $false }}";
+
+        dsl.Remote(remote =>
+        {
+            var executionResult =
+                ((Collection<PSObject>) remote.Execute.PowerShell(pathExistsScript).Result.Data.PsResult)
+                .First().ToString().ToLowerInvariant();
+            var pathExists = Convert.ToBoolean(executionResult);
+
+            if (!pathExists)
+            {
+                remote.CreateDirectory(path);
+            }
+        });
+    }
+}
+{% endhighlight %}

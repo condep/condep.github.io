@@ -1,6 +1,7 @@
 ---
 layout: doc-5-0
 title: Load Balancer Integration
+prev_section: implement-remote-core-operation
 permalink: /docs/5-0/custom-loadbalancer/
 ---
 

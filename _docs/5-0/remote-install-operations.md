@@ -2,6 +2,7 @@
 layout: doc-5-0
 title: Remote Installation Operations
 prev_section: remote-exe-operations
+next_section: custom-operations
 permalink: /docs/5-0/remote-install-operations/
 ---
 

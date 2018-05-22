@@ -19,6 +19,10 @@ This was a long time in the waiting. It was just too confusion and not very logi
 Earlier the sequence of operations you had in your Runbook (previously named Artifact) was added to a execution sequence and then executed at a later point in time. This had some implications on what you could do in your Runbook and sometimes caused confusion. One of the main problems was that all Local Operations was always executed first, no matter when in your Runbook they were defined. This is no longer an issue. The current Runbook with its direct execution model will be executed as is and you can even debug it step-by-step, which was not possible before.
 
 ### Load Balancing is now an Operation
+Load balancing is now an operations that the ConDep DLS offers. Look at the [Load Balancer](/docs/5-0/load-balancer/) section for more information. 
+
+### Operations return results.
+All operations must now return a `ConDep.Dsl.Result`. The `ConDep.Dsl.Result` has three properties: Changed (`bool`), Success (`bool`) and Data (`dynamic`). This result can be used later in the Runbook. See [Runbook](/docs/5-0/runbooks/) section for more information on how to use this.
 
 ## Breaking changes
 

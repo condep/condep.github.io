@@ -23,13 +23,17 @@
 
 - title: Core Operations
   docs:
-    - local-operations
-    - remote-base-operations
-    - remote-config-operations
-    - remote-deploy-operations
-    - remote-exe-operations
-    - remote-install-operations
+  - local-operations
+  - remote-base-operations
+  - remote-config-operations
+  - remote-deploy-operations
+  - remote-exe-operations
+  - remote-install-operations
 
 - title: Extending
   docs:
+  - custom-operations
+  - implement-local-operation
+  - implement-remote-operation
+  - implement-remote-code-operation
   - custom-loadbalancer
