@@ -57,14 +57,14 @@ you (or others) to reuse the operation elsewhere.
 There are four types of operations in ConDep:
 
 * [Local Operation (`LocalOperation`)](#local-operation)
-* [Remote Composite Operation (`RemoteOperation`)](#remote-operation)
+* [Remote Operation (`RemoteOperation`)](#remote-operation)
 * [Remote Code Operation (`RemoteCodeOperation`)](#remote-code-operation)
 
 Below we describe each operation type and how they relate to the other
 operations, but if you want to jump ahead and see example of implementation see:
 
 * [Implementing a Local Operation](../implement-local-operation/)
-* [Implementing a Remote Composite Operation](../implement-remote-operation)
+* [Implementing a Remote Operation](../implement-remote-operation)
 * [Implementing a Remote Code Operation](../implement-remote-code-operation/)
 
 <a name="local-operation"></a>
@@ -98,7 +98,7 @@ See [Implementing a Local Operation](../implement-local-operation/) for more det
 
 <a name="remote-operation"></a>
 
-## Remote Composite Operation
+## Remote Operation
 
 Allows you to author a new Operation by combining existing remote Operations. A
 **Remote Operation** gives you access to ConDep's DSL for remote
@@ -110,7 +110,7 @@ operations.
 
 This is the most common and easiest custom Operation to author in ConDep.
 
-See [Implementing a Remote Composite Operation](../implement-remote-composite-operation)
+See [Implementing a Remote Operation](../implement-remote-operation)
 for more details.
 
 <a name="remote-code-operation"></a>
