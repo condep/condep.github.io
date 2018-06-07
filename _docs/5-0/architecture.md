@@ -6,12 +6,16 @@ next_section: push-based
 permalink: /docs/5-0/architecture/
 ---
 
-<img src="/images/architecture.png">
+## Package dependencies
 
-Network architecture
+This shows the dependencies betseen the repositories and nuget packages in ConDep.
 
-Application architecture
+<img src="/images/pack.png">
 
-Typical infrstructure for ConDep to operate in
+Source for this picture:
+
+* <a href="/files/package_dependencies.pdf">PDF file</a>
+* <a href="/files/package_dependencies.xsds">Visio file</a>
+
 
 {% include doc_not_available.md %}
